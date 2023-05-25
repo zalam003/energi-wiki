@@ -39,11 +39,11 @@ Beside the officially exposed DApp API namespaces (energi, eth, masternode, web3
 | [compensationPropose](#compensationPropose) | | | |
 
 
-# 1. Energi {#energi}
+## 1. Energi {#energi}
 
-## 1.1. Migration API:
+### 1.1. Migration API:
 
-### 1.1.1. energi.listGen2Coins() {#listGen2Coins}
+#### 1.1.1. energi.listGen2Coins() {#listGen2Coins}
 
 Lists the amount of Gen2 NRG coins
 
@@ -52,15 +52,15 @@ Lists the amount of Gen2 NRG coins
 | Console | energi.listGen2Coins() |
 | RPC | {"method": "energi_listGen2Coins", "params": [string]} . |
 
-### 1.1.2. energi.searchGen2Coins(owners[], include_empty) {#searchGen2Coins}
+#### 1.1.2. energi.searchGen2Coins(owners[], include_empty) {#searchGen2Coins}
 
 search by Base58
 
-### 1.1.3. energi.searchRawGen2Coins(raw_owners[], include_empty) {#searchRawGen2Coins}
+#### 1.1.3. energi.searchRawGen2Coins(raw_owners[], include_empty) {#searchRawGen2Coins}
 
 search by raw Hex
 
-### 1.1.4. energi.claimGen2CoinsDirect(password?, 'add', base58_privkey) {#claimGen2CoinsDirect}
+#### 1.1.4. energi.claimGen2CoinsDirect(password?, 'add', base58_privkey) {#claimGen2CoinsDirect}
 
 Claim a specific Gen 2 private key to an Gen 3 address
 
@@ -80,7 +80,7 @@ energi.claimGen2CoinsDirect('password', '0x680cf4b9c12736dbab9eec2a481e6101aacf3
 > 0xba5a8672cb50b609539a74ff76182ed26726601de0f994c610442ad0b24b13d1
 > undefined
 
-### 1.1.5. energi.claimGen2CoinsCombined(password?, dst, file) {#claimGen2CoinsCombined}
+#### 1.1.5. energi.claimGen2CoinsCombined(password?, dst, file) {#claimGen2CoinsCombined}
 
 Claim all coins from Gen 2 file dump to specific address
 
@@ -96,7 +96,7 @@ Claim all coins from Gen 2 file dump to specific address
 energi.claimGen2CoinsCombined('password', '0x67319f845917da973570704b811b641d3f335fa9', 'energi_wallet.dump')
 ```
 
-### 1.1.6. energi.claimGen2CoinsImport(password, file) {#claimGen2CoinsImport}
+#### 1.1.6. energi.claimGen2CoinsImport(password, file) {#claimGen2CoinsImport}
 
 Claim all coins from Gen 2 file dump to the same private keys imported into current instance
 
@@ -111,54 +111,54 @@ Claim all coins from Gen 2 file dump to the same private keys imported into curr
 energi.claimGen2CoinsImport(‘password’, ‘energi_wallet.dump’)
 ```
 
-## 1.2. Budget API:
+### 1.2. Budget API:
 
-### 1.2.1. energi.budgetInfo() {#budgetInfo}
+#### 1.2.1. energi.budgetInfo() {#budgetInfo}
 
 List all budget proposals and their current state
 
-### 1.2.2. energi.budgetPropose(amount, uuid, period, payer[, password])
+#### 1.2.2. energi.budgetPropose(amount, uuid, period, payer[, password])
 
-### 1.2.3. energi.upgradeInfo() {#upgradeInfo}
+#### 1.2.3. energi.upgradeInfo() {#upgradeInfo}
 
 Map of governance upgrades proposal list per each proxy
 
-### 1.2.4. energi.upgradePropose(new_impl, fee, payer[, password]) {#upgradePropose}
+#### 1.2.4. energi.upgradePropose(new_impl, fee, payer[, password]) {#upgradePropose}
 
-### 1.2.5. energi.upgradePerform(proposal, payer[, password]) {#upgradePerform}
+#### 1.2.5. energi.upgradePerform(proposal, payer[, password]) {#upgradePerform}
 
-### 1.2.6. energi.upgradeCollect(proposal, payer[, password]) {#upgradeCollect}
+#### 1.2.6. energi.upgradeCollect(proposal, payer[, password]) {#upgradeCollect}
 
-## 1.3. Voting API:
+### 1.3. Voting API:
 
-### 1.3.1. energi.voteAccept(proposal, mn_owner[, password]) {#voteAccept}
+#### 1.3.1. energi.voteAccept(proposal, mn_owner[, password]) {#voteAccept}
 
-### 1.3.2. energi.voteReject(proposal, mn_owner[, password]) {#voteReject}
+#### 1.3.2. energi.voteReject(proposal, mn_owner[, password]) {#voteReject}
 
-### 1.3.3. energi.withdrawFee(proposal, payer[, password]) {#withdrawFee}
+#### 1.3.3. energi.withdrawFee(proposal, payer[, password]) {#withdrawFee}
 
-## 1.4. Blacklist API
+### 1.4. Blacklist API
 
-### 1.4.1. energi.blacklistInfo() {#blacklistInfo}
+#### 1.4.1. energi.blacklistInfo() {#blacklistInfo}
 
-##### list of:
+###### list of:
 - .target - address
 - .enforce - proposal info
 - .revoke - proposal info
 - .drain - proposal info
 - .blocked - is currently blocked
 
-### 1.4.2. energi.blacklistEnforce(target, fee, payer[, password]) {#blacklistEnforce}
+#### 1.4.2. energi.blacklistEnforce(target, fee, payer[, password]) {#blacklistEnforce}
 
-### 1.4.3. energi.blacklistRevoke(target, fee, payer,[ password]) {#blacklistRevoke}
+#### 1.4.3. energi.blacklistRevoke(target, fee, payer,[ password]) {#blacklistRevoke}
 
-### 1.4.4. energi.blacklistDrain(target, fee, payer[, password]) {#blacklistDrain}
+#### 1.4.4. energi.blacklistDrain(target, fee, payer[, password]) {#blacklistDrain}
 
-### 1.4.5. energi.blacklistCollect(proposal, payer[, password]) {#blacklistCollect}
+#### 1.4.5. energi.blacklistCollect(proposal, payer[, password]) {#blacklistCollect}
 
-## 1.5. Compensation API
+### 1.5. Compensation API
 
-### 1.5.1. energi.compensationInfo() {#compensationInfo}
+#### 1.5.1. energi.compensationInfo() {#compensationInfo}
 
 Same as [energi_budgetInfo](#budgetInfo)
 
@@ -175,19 +175,19 @@ balance: 3.5608486205063e+23,
 proposals: []
 }
 
-### 1.5.2. energi.compensationProcess() {#compensationProcess}
+#### 1.5.2. energi.compensationProcess() {#compensationProcess}
 
 Trigger migration draining and compensation fund distribution processing
 
-### 1.5.3. energi.compensationPropose() {#compensationPropose}
+#### 1.5.3. energi.compensationPropose() {#compensationPropose}
 
 Same as [energi_budgetPropose](#budgetPropose)
 
-# 2. Miner {#miner}
+## 2. Miner {#miner}
 
-## 2.1. Miner API:
+### 2.1. Miner API:
 
-### 2.1.1. miner.setMinerNonceCap() {#setMinerNonceCap}
+#### 2.1.1. miner.setMinerNonceCap() {#setMinerNonceCap}
 
 **Example:**
 
@@ -199,7 +199,7 @@ miner.setMinerNonceCap()
 
 > 0
 
-### 2.1.2. miner.stakingStatus() {#stakingStatus}
+#### 2.1.2. miner.stakingStatus() {#stakingStatus}
 
 Get a status of the staking on the node console
 - hash - block hash
@@ -229,7 +229,7 @@ nonceCap: 0,
 staking: false,
 totalWeight: 0
 
-### 2.1.3. miner.setAutocollateralize(mode) {#setAutocollateralize}
+#### 2.1.3. miner.setAutocollateralize(mode) {#setAutocollateralize}
 
 Some masternode owners desire to stake with their owner's account and automatically deposit available funds. It makes sense to perform such auto-deposit operation only after MN rewards are paid in the current cycle to prevent reset of MN queue position.
 Modes to be controlled by ``--miner.autocollateralize switch``:
@@ -249,11 +249,11 @@ miner.autocollateralize 0
 
 > undefined
 
-# 3. Masternode {#masternode}
+## 3. Masternode {#masternode}
 
-## 3.1. Masternode Token API:
+### 3.1. Masternode Token API:
 
-### 3.1.1. masternode.collateralBalance(addr) {#collateralBalance}
+#### 3.1.1. masternode.collateralBalance(addr) {#collateralBalance}
 
 Shows the masternode collateral of the account
 
@@ -270,7 +270,7 @@ balance: 1e+21,
 lastBlock: 4157
 }
 
-### 3.1.2. masternode.depositCollateral(addr, amount[, password]) {#depositCollateral}
+#### 3.1.2. masternode.depositCollateral(addr, amount[, password]) {#depositCollateral}
 
 Send the collateral in order to announce the masternode, you will be given a token as collateral
 
@@ -285,7 +285,7 @@ masternode.depositCollateral ('0x680cf4b9c12736dbab9eec2a481e6101aacf300a', web3
 > 0x45ddc15c758b7535706a574eeb19ecba529381328a35f3766964cb7bf99b0b43
 undefined
 
-### 3.1.3. masternode.withdrawCollateral(eth.coinbase, amount[, password]) {#withdrawCollateral}
+#### 3.1.3. masternode.withdrawCollateral(eth.coinbase, amount[, password]) {#withdrawCollateral}
 
 **Example:**
 
@@ -298,9 +298,9 @@ masternode.withdrawCollateral('0x680cf4b9c12736dbab9eec2a481e6101aacf300a', web3
 > 0x4d3750f93bfd17f8023a37eceb745f5b409fd3bd06c2d6bfa061dd647e33788c
 Undefined
 
-## 3.2. Masternode Registry API:
+### 3.2. Masternode Registry API:
 
-### 3.2.1. masternode.listMasternodes() {#listMasternodes}
+#### 3.2.1. masternode.listMasternodes() {#listMasternodes}
 
 Get a list of the masternode running or the total of the collateral you have deposited to the masternode in the Energi network
 - announcedBlock
@@ -341,7 +341,7 @@ owner: "0xe36cb3e4cfb91e0c7325a2bf32d8136f978f6fd3",
 swFeatures: "0x80200",
 swVersion: "0.8.2"}]
 
-### 3.2.2. masternode.masternodeInfo(“owner_or_mn”) {#masternodeInfo}
+#### 3.2.2. masternode.masternodeInfo(“owner_or_mn”) {#masternodeInfo}
 
 Gets information about the masternodes assigned to the account
 
@@ -364,7 +364,7 @@ owner: "0x680cf4b9c12736dbab9eec2a481e6101aacf300a",
 swFeatures: "0x0",
 swVersion: "0.0.0"}
 
-### 3.2.3. masternode.announce(owner, enode[, password]) {#announce}
+#### 3.2.3. masternode.announce(owner, enode[, password]) {#announce}
 
 **Example:**
 
@@ -376,7 +376,7 @@ masternode.announce ("0x680cf4b9c12736dbab9eec2a481e6101aacf300a", "enode://679d
 
 > "0x12e212bcc9088f1c3e7108dc2b9cbd1d245bc71ec798c406c873eabad3ae14a8"
 
-### 3.2.4. masternode.denounce(owner[, password]) {#denounce}
+#### 3.2.4. masternode.denounce(owner[, password]) {#denounce}
 
 **Example:**
 
@@ -388,7 +388,7 @@ masternode.denounce("0x680cf4b9c12736dbab9eec2a481e6101aacf300a")
 
 > "0x794a6791a430e8b105181775f76ef1820b8c04e10c899b231b20959b08b7f041
 
-### 3.2.5. masternode.stats() {#stats}
+#### 3.2.5. masternode.stats() {#stats}
 
 Get a status of the masternode on the node console
 
@@ -408,13 +408,13 @@ total: 16,
 totalCollateral: 5.05e+23
 }
 
-# 4. Personal {#personal}
+## 4. Personal {#personal}
 
-## 4.1. Personal API:
+### 4.1. Personal API:
 
 The personal API manages private keys in the key store.
 
-### 4.1.1. personal_importRawKey {#importRawKey}
+#### 4.1.1. personal_importRawKey {#importRawKey}
 
 Imports the given unencrypted private key (hex string) into the keystore, encrypting it with the passphrase.
 Returns the address of the new account.
@@ -434,7 +434,7 @@ personal.importRawKey("0x680cf4b9c12736dbab9eec2a481e6101aacf300a")
 
 > "0x5dc9b39668d904c6363a42c61297ca1c0950f849"
 
-### 4.1.2. personal_listAccounts {#listAccounts}
+#### 4.1.2. personal_listAccounts {#listAccounts}
 
 Returns all the Ethereum account addresses of all keys in the key store.
 
@@ -453,7 +453,7 @@ personal.listAccounts
 
 > ["0x680cf4b9c12736dbab9eec2a481e6101aacf300a"]
 
-### 4.1.3. personal_lockAccount {#lockAccount}
+#### 4.1.3. personal_lockAccount {#lockAccount}
 
 Removes the private key with given address from memory. The account can no longer be used to send transactions.
 
@@ -462,7 +462,7 @@ Removes the private key with given address from memory. The account can no longe
 | Console | personal.lockAccount(address) |
 | RPC | {"method": "personal_lockAccount", "params": [string]} . |
 
-### 4.1.4. personal_newAccount {#newAccount}
+#### 4.1.4. personal_newAccount {#newAccount}
 
 Generates a new private key and stores it in the key store directory. The key file is encrypted with the given passphrase. Returns the address of the new account.
 
@@ -500,7 +500,7 @@ personal.newAccount("password")
 
 > "0x3d80b31a78c30fc628f20b2c89d7ddbf6e53cedc"
 
-### 4.1.5. personal_unlockAccount {#unlockAccount}
+#### 4.1.5. personal_unlockAccount {#unlockAccount}
 
 Decrypts the key with the given address from the key store.
 
@@ -571,7 +571,7 @@ personal.unlockAccount("0x680cf4b9c12736dbab9eec2a481e6101aacf300a", null, 0 ,tr
 
 There are no UTXOs in Gen 3, so the minimal amount of the account within the last 60 minutes (maturity time) will be used for staking. Only the needed part of such amounts is taken to create a block. So, the same large account can stake many times during maturity period - no need to split amounts. By default, all available amount is tried to be staked. If that is not desired then `--miner.noncecap <amount>` can be used to limit amount being staked per block.
 
-### 4.1.6. personal_sendTransaction {#sendTransaction}
+#### 4.1.6. personal_sendTransaction {#sendTransaction}
 
 Validate the given passphrase and submit transaction.
 
@@ -608,7 +608,7 @@ personal.sendTransaction(tx, "password")
 
 > 0x8474441674cdd47b35b875fd1a530b800b51a5264b9975fb21129eeb8c18582f
 
-### 4.1.7. personal_sign {#sign}
+#### 4.1.7. personal_sign {#sign}
 
 The sign method calculates an Ethereum specific signature with:
 
@@ -633,7 +633,7 @@ personal.sign("0xdeadbeaf", "0x9b2055d370f73ec7d8a03e965129118dc8f5bf83", "")
 
 > "0xa3f20717a250c2b0b729b7e5becbff67fdaef7e0699da4de7ca5895b02a170a12d887fd3b17bfdce3481f10bea41f45ba9f709d39ce8325427b57afcfc994cee1b"
 
-### 4.1.8. personal_ecRecover {#ecRecover}
+#### 4.1.8. personal_ecRecover {#ecRecover}
 
 ecRecover returns the address associated with the private key that was used to calculate the signature in personal_sign.
 
