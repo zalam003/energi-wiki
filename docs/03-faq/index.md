@@ -7,13 +7,13 @@ title: Frequently Asked Questions (FAQ)
 
 Have Questions? We have answers here.
 
-- [What is Farming](/docs/faq/what-is-farming)
+<!-- - [What is Farming](/docs/faq/what-is-farming)
 - [How does LP Token farming work?](/docs/faq/how-farming-works)
 - [What do I need to farm?](/docs/faq/farming-needs)
 - [What is the purpose of the GMI farming platform?](/docs/faq/purpose-of-farming)
-- [What are the benefits of using the GMI farming platform?](/docs/faq/gmi-farming-benefits)
+- [What are the benefits of using the GMI farming platform?](/docs/faq/gmi-farming-benefits) -->
 <!-- - [How does LP Farming Pools work?](/docs/faq/lp-farming-pools) -->
-- [Do I get rewards when the locking period is over?](/docs/faq/farming-payout)
+<!-- - [Do I get rewards when the locking period is over?](/docs/faq/farming-payout)
 - [What are the locking periods for?](/docs/faq/locking-periods)
 - [How do I stake my tokens?](/docs/faq/stake-tokens)
 - [What's WETH? How do I get it?](/docs/faq/what-is-weth)
@@ -27,4 +27,4 @@ Have Questions? We have answers here.
 
 ___
 
-- [Important Keywords](/docs/faq/keywords)
+- [Important Keywords](/docs/faq/keywords) -->

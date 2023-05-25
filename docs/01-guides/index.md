@@ -5,7 +5,7 @@ title: Guides
 
 # Guides
 
-## GMI Airdrop
+<!-- ## GMI Airdrop
 - [How to Participate in GMI Airdrop](/docs/guides/participate-in-airdrop)
 
 ## Quick Start Guides
@@ -22,4 +22,4 @@ title: Guides
 - [How to Edit a Listing (Cancel or Lower Price)](/docs/guides/edit-listing)
 - [How to Buy an NFT](/docs/guides/buy-nft)
 - [How to Earn Listing Rewards](/docs/guides/earn-listing-rewards)
-- [How to Claim Listing Rewards](/docs/guides/claim-listing-rewards)
+- [How to Claim Listing Rewards](/docs/guides/claim-listing-rewards) -->

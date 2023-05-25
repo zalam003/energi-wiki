@@ -10,17 +10,17 @@ const FeatureList = [
     link: '/docs/about',
     description: (
       <>
-        What is GMI marketplace and how are we all gonna make it?
+        What is Energi?
       </>
     ),
   },
   {
-    title: 'GonnaMakeIt Guides',
+    title: 'Energi Guides',
     Svg: require('@site/static/img/guides.svg').default,
     link: '/docs/guides',
     description: (
       <>
-        Everything related to GMI Marketplace.
+        Everything related to Energi Core.
       </>
     ),
   },
