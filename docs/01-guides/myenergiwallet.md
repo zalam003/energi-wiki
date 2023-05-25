@@ -69,14 +69,14 @@ Now that you have a MyEnergiWallet ready, you can install the Energi Core Node S
 # Need help?
 **-** Head over our General & Keystore FAQ :
 :::note
-<!-- 
-- [FAQ *General*](03-faq/general){target="_blank"}
-- [FAQ *Keystore*](03-faq/keystore){target="_blank"}
--->
+
+- [FAQ *General*](03-faq/faq)
+- [FAQ *Keystore*](03-faq/faq)
+
 :::
 **-** Get technical assistance :
 :::note
-<!-- 
-- [Help me! *Get technical assistance by the Energi team*](/support/help-me){target="_blank"} 
--->
+
+- [Help me! *Get technical assistance by the Energi team*](03-faq/faq)
+
 :::
