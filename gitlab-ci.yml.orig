@@ -1,0 +1,48 @@
+# Call and Define the gitlab-ci Template needed for this CICD pipeline
+include:
+  #########################
+  # Shared Lib requirement
+  #########################
+  - project: "energi/tech/devops/gitlab-ci-shared-jobs"
+    ref: "develop"
+    file:
+      - "libs/gitlab/ci/templates/nodejs-template.yml"
+      - "libs/gitlab/cd/templates/jobs/kube/k8s-jobs.yml"
+
+
+variables:
+  NODEJS_VERSION: "nodejs-16.14.2"
+  REPOSITORY_NAME: "energi/nft/docs"
+  # Application variables
+  NAMESPACE: ${APP_PROJECT}-${APP_ENV}
+  HELM_CHART: ${APP_PROJECT}-${APP_NAME}-${APP_ENV}
+  HELM_CHART_PATH: "./helm"
+  APP_PROJECT: "docs"
+  APP_NAME: "docusaurus"
+  AWS_ECR: 769325152790.dkr.ecr.us-west-2.amazonaws.com
+
+
+k8s-deploy-mainnet:
+  stage: deploy
+  variables:
+    PROJECT: "energi"
+    ENV: "mainnet"
+    CLUSTERNAME: $PROJECT-$ENV-eks-cluster
+    ENVSUBST: "true"
+    APP_ENV: "mainnet"
+    ACCOUNT: "930210061793"
+    ROLE_NAME: "energi-automation"
+    ROLE_ARN: "arn:aws:iam::930210061793:role/energi-automation"
+    APP_DNS: docs.gonnamakeit.com
+    CERTIFICATE_ARN: arn:aws:acm:us-west-2:930210061793:certificate/711f389c-ea9e-4936-ad97-5125e9cd0f30
+  tags: [docker_runner]
+  extends: .helm_charts_deploy
+  rules:
+    - if: '$CI_COMMIT_BRANCH == "main"'
+  # when: manual
+
+
+# TODO:
+#   - define a good worflow for all the environment
+#     issue : https://git.energi.software/energi/tech/devops/gitlab-ci-shared-jobs/-/issues/5
+#   - set dependencies and needs between the stages ( explore if necessary )

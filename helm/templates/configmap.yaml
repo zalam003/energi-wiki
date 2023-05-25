@@ -1,0 +1,6 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name:  {{ include "energi-docs.fullname" . }}-configmap
+data:
+  {{- toYaml .Values.envVariables | nindent 3 }}
