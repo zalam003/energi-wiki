@@ -4,11 +4,11 @@ title: MyEnergiWallet Guide
 ---
 
 :::info
-> This tutorial explains how to use MyEnergiWallet (MEW), **our new Gen 3 Wallet**.
+This tutorial explains how to use MyEnergiWallet (MEW), **our new Gen 3 Wallet**.
 :::
 # 1 - Requirements
 :::info
-> **We highly recommend you to use the Desktop App version**
+**We highly recommend you to use the Desktop App version**
 :::
 :::note
 
