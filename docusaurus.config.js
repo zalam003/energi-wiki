@@ -6,9 +6,9 @@ const darkCodeTheme = require('prism-react-renderer/themes/dracula');
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
-  title: 'GonnaMakeIt',
-  tagline: 'Your all-in-one resource for GonnaMakeIt',
-  url: 'https://docs.gonnamakeit.com',
+  title: 'Energi Core Gen 3',
+  tagline: 'Welcome to the Official Energi Documentation!',
+  url: 'https://wiki.energi.world',
   baseUrl: '/',
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
