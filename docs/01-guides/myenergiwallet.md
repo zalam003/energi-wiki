@@ -3,19 +3,24 @@ id: myenergiwallet
 title: MyEnergiWallet Guide
 ---
 
+:::info
 > This tutorial explains how to use MyEnergiWallet (MEW), **our new Gen 3 Wallet**.
-{.is-info}
+:::
 # 1 - Requirements
+:::info
 > **We highly recommend you to use the Desktop App version**
-{.is-info}
+:::
+:::note
 <!-- - [MyEnergiWallet *Download the Desktop App*](/downloads/myenergiwallet){target="_blank"} -->
-{.links-list}
+:::
 <br>
+:::caution
 > **If you choose to use the web version, make sure to ALWAYS verify the URL and the SSL certificate.**
-{.is-warning}
+:::
 ![certification.png](docs/assets/images/certification.png =400x)
+:::note
 - [MyEnergiWallet *Web version*](https://wallet.energi.network/){target="_blank"}
-{.links-list}
+:::
 # 2 - Create a new wallet
 **2.1 -** Let's get started by clicking on <kbd>CREATE WALLET</kbd>.
 ![create-mew.png](docs/assets/images/create-mew.png =500x)
@@ -27,18 +32,21 @@ title: MyEnergiWallet Guide
 **2.4 -** Save your keystore file and again, save it in a safe place.
 ![save-file.png](docs/assets/images/save-file.png =500x)
 **2.5 -** On the next screen you will be able to save your wallet as a paper wallet, and your private keys if you want to.
+:::info
 > **Safest option is to print your Paper wallet and store it in a safe place.**
-{.is-info}
+:::
 ![paperwallet.png](docs/assets/images/paperwallet.png =500x)
+:::tip Success
 > **Congratulations, you successfully created your new wallet!**
-{.is-success}
+:::
 # 3 - The 3-2-1 Backup rule
 ![whatis-pillar_321_backup.png](docs/assets/images/whatis-pillar_321_backup.png =500x)
+:::info
 > **The 3-2-1 Backup rule consist of :**
 **-** Having (at least) 3 backups of your wallet
 **-** Storing these backups on 2 different supports
 **-** Keeping one backup off-site
-{.is-info}
+:::
 **3.1 -** The first backup will stay **on your machine** in a new folder for this usage!
 (**NOT** in any installation folder, which might result in a loss)
 **3.2 -** The second backup will be stored **in an USB key**.
@@ -54,9 +62,11 @@ Now that you have a MyEnergiWallet ready, you can install the Energi Core Node S
 <a href="/advanced/scripted-linux-installation"><img border="0" alt="scripted-linux-installation" src="docs/assets/images/nrg-btn.png" width="100"></a> -->
 # Need help?
 **-** Head over our General & Keystore FAQ :
+:::note
 <!-- - [FAQ *General*](/faq/general){target="_blank"}
 - [FAQ *Keystore*](/faq/keystore){target="_blank"} -->
-{.links-list}
+:::
 **-** Get technical assistance :
+:::note
 <!-- - [Help me! *Get technical assistance by the Energi team*](/support/help-me){target="_blank"} -->
-{.links-list}
+:::
