@@ -8,7 +8,7 @@ const darkCodeTheme = require('prism-react-renderer/themes/dracula');
 const config = {
   title: 'Energi Core Gen 3',
   tagline: 'Welcome to the Official Energi Documentation!',
-  url: 'https://wiki.energi.world',
+  url: 'https://zalam003.gitlab.io',
   baseUrl: '/',
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
