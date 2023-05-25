@@ -1,6 +1,6 @@
 ---
 id: json-rpc
-title: JSON-RPC Server
+title: JSON-RPC API
 ---
 
 :::info
@@ -18,21 +18,25 @@ To talk to an Energi 3 node from inside a JavaScript application use the [web3.j
 ### Default Mainnet Endpoints
 
 <center>
-| Client | URL |
-| ------------- |:------------:|
-| P2P | http://localhost:39797 |
-| HTTP | http://localhost:39796 |
-| WS | ws://localhost:39795 |
+
+| Client |           URL          |
+| ------ |:----------------------:|
+| P2P    | http://localhost:39797 |
+| HTTP   | http://localhost:39796 |
+| WS     | ws://localhost:39795   |
+
 </center>
 
 ### Default Testnet Endpoints
 
 <center>
-| Client | URL |
-| ------------- |:-------------:
-| P2P | http://localhost:49797
-| HTTP | http://localhost:49796
-| WS | ws://localhost:49795
+
+| Client |          URL           |
+| ------ |:----------------------:|
+| P2P    | http://localhost:49797 |
+| HTTP   | http://localhost:49796 |
+| WS     | ws://localhost:49795   |
+
 </center>
 
 ## Starting (with Go)
@@ -42,10 +46,15 @@ To talk to an Energi 3 node from inside a JavaScript application use the [web3.j
 :::
 
 Start the HTTP JSON-RPC with the --rpc flag
+
 `energi3 --testnet --rpc`
+
 Change the default port (39796) and listing address (localhost) with:
+
 `energi3 --testnet --rpc --rpcaddr <ip> --rpcport <portnumber>`
+
 If you are trying to access the RPC from a browser, CORS will need to be enabled with the appropriate domain set. Otherwise, JavaScript calls are limited by the same-origin policy and requests will fail:
+
 `energi3 --testnet --rpc --rpccorsdomain "http://localhost:3000"`
 
 :::info
@@ -164,8 +173,8 @@ String - The current client version.
 curl -X POST --data '{"jsonrpc":"2.0","method":"web3_clientVersion","params":[],"id":67}' -H 'Content-Type: application/json' 127.0.0.1:49795
 // Result
 {
-"jsonrpc":"2.0",
-"result": "Mist/v0.9.3/darwin/go1.12.7"
+  "jsonrpc":"2.0",
+  "result": "Mist/v0.9.3/darwin/go1.12.7"
 }
 ```
 
@@ -196,9 +205,9 @@ DATA - The SHA3 result of the given string.
 curl -X POST --data '{"jsonrpc":"2.0","method":"web3_sha3","params":["0x68656c6c6f20776f726c64"],"id":64}'
 // Result
 {
-"id":64,
-"jsonrpc": "2.0",
-"result": "0x47173285a8d7341e5e972fc677286384f802f8ef42a5ec5f03bbfa254cb01fad"
+  "id":64,
+  "jsonrpc": "2.0",
+  "result": "0x47173285a8d7341e5e972fc677286384f802f8ef42a5ec5f03bbfa254cb01fad"
 }
 ```
 
@@ -218,9 +227,9 @@ Returns the current network id.
 curl -X POST --data '{"jsonrpc":"2.0","method":"net_version","params":[],"id":67}'
 // Result
 {
-"id":67,
-"jsonrpc": "2.0",
-"result": "49797"
+  "id":67,
+  "jsonrpc": "2.0",
+  "result": "49797"
 }
 ```
 
@@ -239,9 +248,9 @@ Boolean - true when listening, otherwise false.
 curl -X POST --data '{"jsonrpc":"2.0","method":"net_listening","params":[],"id":67}'
 // Result
 {
-"id":67,
-"jsonrpc":"2.0",
-"result":true
+  "id":67,
+  "jsonrpc":"2.0",
+  "result":true
 }
 ```
 
@@ -259,9 +268,9 @@ Returns number of peers currently connected to the client.
 curl -X POST --data '{"jsonrpc":"2.0","method":"net_peerCount","params":[],"id":74}'
 // Result
 {
-"id":74,
-"jsonrpc": "2.0",
-"result": "0x2" // 2
+  "id":74,
+  "jsonrpc": "2.0",
+  "result": "0x2" // 2
 }
 ```
 
@@ -279,9 +288,9 @@ Returns the current ethereum protocol version.
 curl -X POST --data '{"jsonrpc":"2.0","method":"eth_protocolVersion","params":[],"id":67}'
 // Result
 {
-"id":67,
-"jsonrpc": "2.0",
-"result": "0x54"
+  "id":67,
+  "jsonrpc": "2.0",
+  "result": "0x54"
 }
 ```
 
@@ -303,19 +312,19 @@ Returns an object with data about the sync status or false.
 curl -X POST --data '{"jsonrpc":"2.0","method":"eth_syncing","params":[],"id":1}'
 // Result
 {
-"id":1,
-"jsonrpc": "2.0",
-"result": {
-startingBlock: '0x384',
-currentBlock: '0x386',
-highestBlock: '0x454'
-}
+  "id":1,
+  "jsonrpc": "2.0",
+  "result": {
+    startingBlock: '0x384',
+    currentBlock: '0x386',
+    highestBlock: '0x454'
+  }
 }
 // Or when not syncing
 {
-"id":1,
-"jsonrpc": "2.0",
-"result": false
+  "id":1,
+  "jsonrpc": "2.0",
+  "result": false
 }
 ```
 
@@ -334,9 +343,9 @@ DATA (20 bytes) - the current coinbase address.
 curl -X POST --data '{"jsonrpc":"2.0","method":"eth_coinbase","params":[],"id":64}'
 // Result
 {
-"id":64,
-"jsonrpc": "2.0",
-"result": "0xc94770007dda54cF92009BFF0dE90c06F603a09f"
+  "id":64,
+  "jsonrpc": "2.0",
+  "result": "0xc94770007dda54cF92009BFF0dE90c06F603a09f"
 }
 ```
 
@@ -355,9 +364,9 @@ Returns true if client is actively mining new blocks.
 curl -X POST --data '{"jsonrpc":"2.0","method":"eth_mining","params":[],"id":71}'
 // Result
 {
-"id":71,
-"jsonrpc": "2.0",
-"result": true
+  "id":71,
+  "jsonrpc": "2.0",
+  "result": true
 }
 ```
 
@@ -376,9 +385,9 @@ Returns the number of hashes per second that the node is mining with.
 curl -X POST --data '{"jsonrpc":"2.0","method":"eth_hashrate","params":[],"id":71}'
 // Result
 {
-"id":71,
-"jsonrpc": "2.0",
-"result": "0x38a"
+  "id":71,
+  "jsonrpc": "2.0",
+  "result": "0x38a"
 }
 ```
 
@@ -397,9 +406,9 @@ Returns the current price per gas in wei.
 curl -X POST --data '{"jsonrpc":"2.0","method":"eth_gasPrice","params":[],"id":73}'
 // Result
 {
-"id":73,
-"jsonrpc": "2.0",
-"result": "0x09184e72a000" // 10000000000000
+  "id":73,
+  "jsonrpc": "2.0",
+  "result": "0x09184e72a000" // 10000000000000
 }
 ```
 
@@ -418,9 +427,9 @@ Returns a list of addresses owned by client.
 curl -X POST --data '{"jsonrpc":"2.0","method":"eth_accounts","params":[],"id":1}'
 // Result
 {
-"id":1,
-"jsonrpc": "2.0",
-"result": ["0xc94770007dda54cF92009BFF0dE90c06F603a09f"]
+  "id":1,
+  "jsonrpc": "2.0",
+  "result": ["0xc94770007dda54cF92009BFF0dE90c06F603a09f"]
 }
 ```
 
@@ -439,9 +448,9 @@ Returns the number of most recent block.
 curl -X POST --data '{"jsonrpc":"2.0","method":"eth_blockNumber","params":[],"id":1}'
 // Result
 {
-"id":83,
-"jsonrpc": "2.0",
-"result": "0xc94" // 1207
+  "id":83,
+  "jsonrpc": "2.0",
+  "result": "0xc94" // 1207
 }
 ```
 
@@ -460,8 +469,8 @@ Returns the balance of the account of given address.
 
 ```
 params: [
-'0xc94770007dda54cF92009BFF0dE90c06F603a09f',
-'latest'
+  '0xc94770007dda54cF92009BFF0dE90c06F603a09f',
+  'latest'
 ]
 ```
 
@@ -476,9 +485,9 @@ params: [
 curl -X POST --data '{"jsonrpc":"2.0","method":"eth_getBalance","params":["0xc94770007dda54cF92009BFF0dE90c06F603a09f", "latest"],"id":1}'
 // Result
 {
-"id":1,
-"jsonrpc": "2.0",
-"result": "0x0234c8a3397aab58" // 158972490234375000
+  "id":1,
+  "jsonrpc": "2.0",
+  "result": "0x0234c8a3397aab58" // 158972490234375000
 }
 ```
 
@@ -493,11 +502,11 @@ curl -X POST --data '{"jsonrpc":"2.0","method":"eth_getBalance","params":["0xc94
 ```
 // Result
 {
-"Jsonrpc":"2.0",
-"Id":1,
-"Error":{
-"Code":-32000,
-"message":"missing trie node fb94fa25c7387c59ccf8f33c25726b4c82059d7c41c1f910ccab7f6670782bfa (path )"}
+  "Jsonrpc":"2.0",
+  "Id":1,
+  "Error":{
+  "Code":-32000,
+  "message":"missing trie node fb94fa25c7387c59ccf8f33c25726b4c82059d7c41c1f910ccab7f6670782bfa (path )"}
 }
 ```
 
@@ -506,9 +515,9 @@ curl -X POST --data '{"jsonrpc":"2.0","method":"eth_getBalance","params":["0xc94
 ```
 // Result
 {
-"Jsonrpc":"2.0",
-"Id":1,
-"result":null
+  "Jsonrpc":"2.0",
+  "Id":1,
+  "result":null
 }
 ```
 
@@ -531,12 +540,12 @@ Returns the value from a storage position at a given address.
 
 ```
 contract Storage {
-uint pos0;
-mapping(address => uint) pos1;
-function Storage() {
-pos0 = 1234;
-pos1[msg.sender] = 5678;
-}
+  uint pos0;
+  mapping(address => uint) pos1;
+  function Storage() {
+    pos0 = 1234;
+    pos1[msg.sender] = 5678;
+  }
 }
 ```
 
@@ -544,6 +553,7 @@ Retrieving the value of pos0 is straight forward:
 
 ```
 curl -X POST --data '{"jsonrpc":"2.0", "method": "eth_getStorageAt", "params": ["0x295a70b2de5e3953354a6a8344e616ed314d7251", "0x0", "latest"], "id": 1}'
+
 {"jsonrpc":"2.0","id":1,"result":"0x00000000000000000000000000000000000000000000000000000000000004d2"}
 ```
 
@@ -564,6 +574,7 @@ keccak(decodeHex("000000000000000000000000391694e7e0b0cce554cb130d723a9d27458f92
 ```
 > var key = "000000000000000000000000391694e7e0b0cce554cb130d723a9d27458f9298" + "0000000000000000000000000000000000000000000000000000000000000001"
 undefined
+
 > web3.sha3(key, {"encoding": "hex"})
 "0x6661e9d6d8b923d5bbaab1b96e1dd51ff6ea2a93520fdc9eb75d059238b8c5e9"
 ```
@@ -572,6 +583,7 @@ undefined
 
 ```
 curl -X POST --data '{"jsonrpc":"2.0", "method": "eth_getStorageAt", "params": ["0x295a70b2de5e3953354a6a8344e616ed314d7251", "0x6661e9d6d8b923d5bbaab1b96e1dd51ff6ea2a93520fdc9eb75d059238b8c5e9", "latest"], "id": 1}' localhost:8545
+
 {"jsonrpc":"2.0","id":1,"result":"0x000000000000000000000000000000000000000000000000000000000000162e"}
 ```
 
@@ -582,11 +594,11 @@ Using a block height before a balance existed returns:
 ```
 // Result
 {
-"Jsonrpc":"2.0",
-"Id":1,
-"Error":{
-"Code":-32000,
-"message":"missing trie node fb94fa25c7387c59ccf8f33c25726b4c82059d7c41c1f910ccab7f6670782bfa (path )"}
+  "Jsonrpc":"2.0",
+  "Id":1,
+  "Error":{
+  "Code":-32000,
+  "message":"missing trie node fb94fa25c7387c59ccf8f33c25726b4c82059d7c41c1f910ccab7f6670782bfa (path )"}
 }
 ```
 
@@ -595,9 +607,9 @@ Using a block height before a balance existed returns:
 ```
 // Result
 {
-"Jsonrpc":"2.0",
-"Id":1,
-"result":null
+  "Jsonrpc":"2.0",
+  "Id":1,
+  "result":null
 }
 ```
 
@@ -614,8 +626,8 @@ Returns the number of transactions sent from an address.
 
 ```
 params: [
-'0xc94770007dda54cF92009BFF0dE90c06F603a09f',
-'latest' // state at the latest block
+  '0xc94770007dda54cF92009BFF0dE90c06F603a09f',
+  'latest' // state at the latest block
 ]
 ```
 
@@ -630,9 +642,9 @@ params: [
 curl -X POST --data '{"jsonrpc":"2.0","method":"eth_getTransactionCount","params":["0xc94770007dda54cF92009BFF0dE90c06F603a09f","latest"],"id":1}'
 // Result
 {
-"id":1,
-"jsonrpc": "2.0",
-"result": "0x1" // 1
+  "id":1,
+  "jsonrpc": "2.0",
+  "result": "0x1" // 1
 }
 ```
 
@@ -648,7 +660,7 @@ Returns the number of transactions in a block from a block matching the given bl
 
 ```
 params: [
-'0xb903239f8543d04b5dc1ba6579132b143087c68db1b2168786408fcbce568238'
+  '0xb903239f8543d04b5dc1ba6579132b143087c68db1b2168786408fcbce568238'
 ]
 ```
 
@@ -663,9 +675,9 @@ params: [
 curl -X POST --data '{"jsonrpc":"2.0","method":"eth_getBlockTransactionCountByHash","params":["0xc94770007dda54cF92009BFF0dE90c06F603a09f"],"id":1}'
 // Result
 {
-"id":1,
-"jsonrpc": "2.0",
-"result": "0xc" // 11
+  "id":1,
+  "jsonrpc": "2.0",
+  "result": "0xc" // 11
 }
 ```
 
@@ -681,7 +693,7 @@ Returns the number of transactions in a block matching the given block number.
 
 ```
 params: [
-'0xe8', // 232
+  '0xe8', // 232
 ]
 ```
 
@@ -696,9 +708,9 @@ params: [
 curl -X POST --data '{"jsonrpc":"2.0","method":"eth_getBlockTransactionCountByNumber","params":["0xe8"],"id":1}'
 // Result
 {
-"id":1,
-"jsonrpc": "2.0",
-"result": "0xa" // 10
+  "id":1,
+  "jsonrpc": "2.0",
+  "result": "0xa" // 10
 }
 ```
 
@@ -715,8 +727,8 @@ Returns code at a given address.
 
 ```
 params: [
-'0xa94f5374fce5edbc8e2a8697c15331677e6ebf0b',
-'0x2' // 2
+  '0xa94f5374fce5edbc8e2a8697c15331677e6ebf0b',
+  '0x2' // 2
 ]
 ```
 
@@ -731,9 +743,9 @@ params: [
 curl -X POST --data '{"jsonrpc":"2.0","method":"eth_getCode","params":["0xa94f5374fce5edbc8e2a8697c15331677e6ebf0b", "0x2"],"id":1}'
 // Result
 {
-"id":1,
-"jsonrpc": "2.0",
-"result": "0x600160008035811a818181146012578301005b601b6001356025565b8060005260206000f25b600060078202905091905056"
+  "id":1,
+  "jsonrpc": "2.0",
+  "result": "0x600160008035811a818181146012578301005b601b6001356025565b8060005260206000f25b600060078202905091905056"
 }
 ```
 
@@ -767,9 +779,9 @@ By adding a prefix to the message makes the calculated signature recognisable as
 curl -X POST --data '{"jsonrpc":"2.0","method":"eth_sign","params":["Hello world!", "0x9b2055d370f73ec7d8a03e965129118dc8f5bf83"],"id":1}'
 // Result
 {
-"id":1,
-"jsonrpc": "2.0",
-"result": "0xa3f20717a250c2b0b729b7e5becbff67fdaef7e0699da4de7ca5895b02a170a12d887fd3b17bfdce3481f10bea41f45ba9f709d39ce8325427b57afcfc994cee1b"
+  "id":1,
+  "jsonrpc": "2.0",
+  "result": "0xa3f20717a250c2b0b729b7e5becbff67fdaef7e0699da4de7ca5895b02a170a12d887fd3b17bfdce3481f10bea41f45ba9f709d39ce8325427b57afcfc994cee1b"
 }
 ```
 
@@ -793,12 +805,12 @@ Creates new message call transaction or a contract creation, if the data field c
 
 ```
 params: [{
-"from": "0xb60e8dd61c5d32be8058bb8eb970870f07233155",
-"to": "0xd46e8dd67c5d32be8058bb8eb970870f07244567",
-"gas": "0x76c0", // 30400
-"gasPrice": "0x9184e72a000", // 10000000000000
-"value": "0x9184e72a", // 2441406250
-"data": "0xd46e8dd67c5d32be8d46e8dd67c5d32be8058bb8eb970870f072445675058bb8eb970870f072445675"
+  "from": "0xb60e8dd61c5d32be8058bb8eb970870f07233155",
+  "to": "0xd46e8dd67c5d32be8058bb8eb970870f07244567",
+  "gas": "0x76c0", // 30400
+  "gasPrice": "0x9184e72a000", // 10000000000000
+  "value": "0x9184e72a", // 2441406250
+  "data": "0xd46e8dd67c5d32be8d46e8dd67c5d32be8058bb8eb970870f072445675058bb8eb970870f072445675"
 }]
 ```
 
@@ -811,16 +823,18 @@ Use [eth_getTransactionReceipt](#eth_gettransactionreceipt) to get the contract 
 :::
 
 **Example:**
+
 ```
 // Request
 curl -X POST --data '{"jsonrpc":"2.0","method":"eth_sendTransaction","params":[{see above}],"id":1}'
 // Result
 {
-"id":1,
-"jsonrpc": "2.0",
-"result": "0xe670ec64341771606e55d6b4ca35a1a6b75ee3d5145a99d05921026d1527331"
+  "id":1,
+  "jsonrpc": "2.0",
+  "result": "0xe670ec64341771606e55d6b4ca35a1a6b75ee3d5145a99d05921026d1527331"
 }
 ```
+
 ### eth_sendRawTransaction <a name="eth_sendrawtransaction"></a>
 
 Creates new message call transaction or a contract creation for signed transactions.
@@ -850,9 +864,9 @@ Use [eth_getTransactionReceipt](#eth_gettransactionreceipt) to get the contract 
 curl -X POST --data '{"jsonrpc":"2.0","method":"eth_sendRawTransaction","params":[{see above}],"id":1}'
 // Result
 {
-"id":1,
-"jsonrpc": "2.0",
-"result": "0xe670ec64341771606e55d6b4ca35a1a6b75ee3d5145a99d05921026d1527331"
+  "id":1,
+  "jsonrpc": "2.0",
+  "result": "0xe670ec64341771606e55d6b4ca35a1a6b75ee3d5145a99d05921026d1527331"
 }
 ```
 
@@ -883,9 +897,9 @@ Executes a new message call immediately without creating a transaction on the bl
 curl -X POST --data '{"jsonrpc":"2.0","method":"eth_call","params":[{see above}],"id":1}'
 // Result
 {
-"id":1,
-"jsonrpc": "2.0",
-"result": "0x"
+  "id":1,
+  "jsonrpc": "2.0",
+  "result": "0x"
 }
 ```
 
@@ -913,9 +927,9 @@ See [eth_call](#eth_call) parameters, expect that all properties are optional. I
 curl -X POST --data '{"jsonrpc":"2.0","method":"eth_estimateGas","params":[{see above}],"id":1}'
 // Result
 {
-"id":1,
-"jsonrpc": "2.0",
-"result": "0x5208" // 21000
+  "id":1,
+  "jsonrpc": "2.0",
+  "result": "0x5208" // 21000
 }
 ```
 
@@ -932,8 +946,8 @@ Returns information about a block by hash.
 
 ```
 params: [
-'0xe670ec64341771606e55d6b4ca35a1a6b75ee3d5145a99d05921026d1527331',
-true
+  '0xe670ec64341771606e55d6b4ca35a1a6b75ee3d5145a99d05921026d1527331',
+  true
 ]
 ```
 
@@ -967,28 +981,28 @@ true
 curl -X POST --data '{"jsonrpc":"2.0","method":"eth_getBlockByHash","params":["0xe670ec64341771606e55d6b4ca35a1a6b75ee3d5145a99d05921026d1527331", true],"id":1}'
 // Result
 {
-"id":1,
-"jsonrpc":"2.0",
-"result": {
-"number": "0x1b4", // 436
-"hash": "0xe670ec64341771606e55d6b4ca35a1a6b75ee3d5145a99d05921026d1527331",
-"parentHash": "0x9646252be9520f6e71339a8df9c55e4d7619deeb018d2a3f2d21fc165dde5eb5",
-"nonce": "0xe04d296d2460cfb8472af2c5fd05b5a214109c25688d3704aed5484f9a7792f2",
-"sha3Uncles": "0x1dcc4de8dec75d7aab85b567b6ccd41ad312451b948a7413f0a142fd40d49347",
-"logsBloom": "0xe670ec64341771606e55d6b4ca35a1a6b75ee3d5145a99d05921026d1527331",
-"transactionsRoot": "0x56e81f171bcc55a6ff8345e692c0f86e5b48e01b996cadc001622fb5e363b421",
-"stateRoot": "0xd5855eb08b3387c0af375e9cdb6acfc05eb8f519e419b874b6ff2ffda7ed1dff",
-"miner": "0x4e65fda2159562a496f9f3522f89122a3088497a",
-"difficulty": "0x027f07", // 163591
-"totalDifficulty": "0x027f07", // 163591
-"extraData": "0x0000000000000000000000000000000000000000000000000000000000000000",
-"size": "0x027f07", // 163591
-"gasLimit": "0x9f759", // 653145
-"gasUsed": "0x9f759", // 653145
-"timestamp": "0x54e34e8e" // 1424182926
-"transactions": [{...},{ ... }]
-"uncles": ["0x1606e5...", "0xd5145a9..."]
-}
+  "id":1,
+  "jsonrpc":"2.0",
+  "result": {
+    "number": "0x1b4", // 436
+    "hash": "0xe670ec64341771606e55d6b4ca35a1a6b75ee3d5145a99d05921026d1527331",
+    "parentHash": "0x9646252be9520f6e71339a8df9c55e4d7619deeb018d2a3f2d21fc165dde5eb5",
+    "nonce": "0xe04d296d2460cfb8472af2c5fd05b5a214109c25688d3704aed5484f9a7792f2",
+    "sha3Uncles": "0x1dcc4de8dec75d7aab85b567b6ccd41ad312451b948a7413f0a142fd40d49347",
+    "logsBloom": "0xe670ec64341771606e55d6b4ca35a1a6b75ee3d5145a99d05921026d1527331",
+    "transactionsRoot": "0x56e81f171bcc55a6ff8345e692c0f86e5b48e01b996cadc001622fb5e363b421",
+    "stateRoot": "0xd5855eb08b3387c0af375e9cdb6acfc05eb8f519e419b874b6ff2ffda7ed1dff",
+    "miner": "0x4e65fda2159562a496f9f3522f89122a3088497a",
+    "difficulty": "0x027f07", // 163591
+    "totalDifficulty": "0x027f07", // 163591
+    "extraData": "0x0000000000000000000000000000000000000000000000000000000000000000",
+    "size": "0x027f07", // 163591
+    "gasLimit": "0x9f759", // 653145
+    "gasUsed": "0x9f759", // 653145
+    "timestamp": "0x54e34e8e" // 1424182926
+    "transactions": [{...},{ ... }]
+    "uncles": ["0x1606e5...", "0xd5145a9..."]
+  }
 }
 ```
 
@@ -1005,8 +1019,8 @@ Returns information about a block by block number.
 
 ```
 params: [
-'0x1b4', // 436
-true
+  '0x1b4', // 436
+  true
 ]
 ```
 
@@ -1037,7 +1051,7 @@ Returns the information about a transaction requested by transaction hash.
 
 ```
 params: [
-"0x88df016429689c079f3b2f6ad39fa052532c56795b733da78a91ebe6a713944b"
+  "0x88df016429689c079f3b2f6ad39fa052532c56795b733da78a91ebe6a713944b"
 ]
 ```
 
@@ -1066,24 +1080,24 @@ params: [
 curl -X POST --data '{"jsonrpc":"2.0","method":"eth_getTransactionByHash","params":["0x88df016429689c079f3b2f6ad39fa052532c56795b733da78a91ebe6a713944b"],"id":1}'
 // Result
 {
-"jsonrpc":"2.0",
-"id":1,
-"result":{
-"blockHash":"0x1d59ff54b1eb26b013ce3cb5fc9dab3705b415a67127a003c3e61eb445bb8df2",
-"blockNumber":"0x5daf3b", // 6139707
-"from":"0xa7d9ddbe1f17865597fbd27ec712455208b6b76d",
-"gas":"0xc350", // 50000
-"gasPrice":"0x4a817c800", // 20000000000
-"hash":"0x88df016429689c079f3b2f6ad39fa052532c56795b733da78a91ebe6a713944b",
-"input":"0x68656c6c6f21",
-"nonce":"0x15", // 21
-"to":"0xf02c1c8e6114b1dbe8937a39260b5b0a374432bb",
-"transactionIndex":"0x41", // 65
-"value":"0xf3dbb76162000", // 4290000000000000
-"v":"0x25", // 37
-"r":"0x1b5e176d927f8e9ab405058b2d2457392da3e20f328b16ddabcebc33eaac5fea",
-"s":"0x4ba69724e8f69de52f0125ad8b3c5c2cef33019bac3249e2c0a2192766d1721c"
-}
+  "jsonrpc":"2.0",
+  "id":1,
+  "result":{
+    "blockHash":"0x1d59ff54b1eb26b013ce3cb5fc9dab3705b415a67127a003c3e61eb445bb8df2",
+    "blockNumber":"0x5daf3b", // 6139707
+    "from":"0xa7d9ddbe1f17865597fbd27ec712455208b6b76d",
+    "gas":"0xc350", // 50000
+    "gasPrice":"0x4a817c800", // 20000000000
+    "hash":"0x88df016429689c079f3b2f6ad39fa052532c56795b733da78a91ebe6a713944b",
+    "input":"0x68656c6c6f21",
+    "nonce":"0x15", // 21
+    "to":"0xf02c1c8e6114b1dbe8937a39260b5b0a374432bb",
+    "transactionIndex":"0x41", // 65
+    "value":"0xf3dbb76162000", // 4290000000000000
+    "v":"0x25", // 37
+    "r":"0x1b5e176d927f8e9ab405058b2d2457392da3e20f328b16ddabcebc33eaac5fea",
+    "s":"0x4ba69724e8f69de52f0125ad8b3c5c2cef33019bac3249e2c0a2192766d1721c"
+  }
 }
 ```
 
@@ -1101,8 +1115,8 @@ Returns information about a transaction by block hash and transaction index posi
 
 ```
 params: [
-'0xe670ec64341771606e55d6b4ca35a1a6b75ee3d5145a99d05921026d1527331',
-'0x0' // 0
+  '0xe670ec64341771606e55d6b4ca35a1a6b75ee3d5145a99d05921026d1527331',
+  '0x0' // 0
 ]
 ```
 
@@ -1134,8 +1148,8 @@ Returns information about a transaction by block number and transaction index po
 
 ```
 params: [
-'0x29c', // 668
-'0x0' // 0
+  '0x29c', // 668
+  '0x0' // 0
 ]
 ```
 
@@ -1159,7 +1173,7 @@ See [eth_getTransactionByHash](#eth_gettransactionbyhash)
 Returns the receipt of a transaction by transaction hash.
 
 :::danger
-> The receipt is not available for pending transactions.
+The receipt is not available for pending transactions.
 :::
 
 **Parameters:**
@@ -1170,7 +1184,7 @@ Returns the receipt of a transaction by transaction hash.
 
 ```
 params: [
-'0xb903239f8543d04b5dc1ba6579132b143087c68db1b2168786408fcbce568238'
+  '0xb903239f8543d04b5dc1ba6579132b143087c68db1b2168786408fcbce568238'
 ]
 ```
 
@@ -1201,22 +1215,22 @@ params: [
 curl -X POST --data '{"jsonrpc":"2.0","method":"eth_getTransactionReceipt","params":["0xb903239f8543d04b5dc1ba6579132b143087c68db1b2168786408fcbce568238"],"id":1}'
 // Result
 {
-"id":1,
-"jsonrpc":"2.0",
-"result": {
-transactionHash: '0xb903239f8543d04b5dc1ba6579132b143087c68db1b2168786408fcbce568238',
-transactionIndex: '0x1', // 1
-blockNumber: '0xb', // 11
-blockHash: '0xc6ef2fc5426d6ad6fd9e2a26abeab0aa2411b7ab17f30a99d3cb96aed1d1055b',
-cumulativeGasUsed: '0x33bc', // 13244
-gasUsed: '0x4dc', // 1244
-contractAddress: '0xb60e8dd61c5d32be8058bb8eb970870f07233155', // or null, if none was created
-logs: [{
-// logs as returned by getFilterLogs, etc.
-}, ...],
-logsBloom: "0x00...0", // 256 byte bloom filter
-status: '0x1'
-}
+  "id":1,
+  "jsonrpc":"2.0",
+  "result": {
+    transactionHash: '0xb903239f8543d04b5dc1ba6579132b143087c68db1b2168786408fcbce568238',
+    transactionIndex: '0x1', // 1
+    blockNumber: '0xb', // 11
+    blockHash: '0xc6ef2fc5426d6ad6fd9e2a26abeab0aa2411b7ab17f30a99d3cb96aed1d1055b',
+    cumulativeGasUsed: '0x33bc', // 13244
+    gasUsed: '0x4dc', // 1244
+    contractAddress: '0xb60e8dd61c5d32be8058bb8eb970870f07233155', // or null, if none was created
+    logs: [{
+      // logs as returned by getFilterLogs, etc.
+      }, ...],
+    logsBloom: "0x00...0", // 256 byte bloom filter
+    status: '0x1'
+  }
 }
 ```
 
@@ -1235,39 +1249,39 @@ Returns the pending transactions list.
 curl -X POST --data '{"jsonrpc":"2.0","method":"eth_pendingTransactions","params":[],"id":1}'
 // Result
 {
-"id":1,
-"jsonrpc":"2.0",
-"result": [{
-blockHash: '0x0000000000000000000000000000000000000000000000000000000000000000',
-blockNumber: null,
-from: '0x28bdb9c230f4d5e45435e4d006326ee32e46cb31',
-gas: '0x204734',
-gasPrice: '0x4a817c800',
-hash: '0x8dfa6a59307a490d672494a171feee09db511f05e9c097e098edc2881f9ca4f6',
-input: '0x6080604052600',
-nonce: '0x12',
-to: null,
-transactionIndex: '0x0',
-value: '0x0',
-v: '0x3d',
-r: '0xaabc9ddafffb2ae0bac4107697547d22d9383667d9e97f5409dd6881ce08f13f',
-s: '0x69e43116be8f842dcd4a0b2f760043737a59534430b762317db21d9ac8c5034'
-},....,{
-blockHash: '0x0000000000000000000000000000000000000000000000000000000000000000',
-blockNumber: null,
-from: '0x28bdb9c230f4d5e45435e4d006326ee32e487b31',
-gas: '0x205940',
-gasPrice: '0x4a817c800',
-hash: '0x8e4340ea3983d86e4b6c44249362f716ec9e09849ef9b6e3321140581d2e4dac',
-input: '0xe4b6c4424936',
-nonce: '0x14',
-to: null,
-transactionIndex: '0x0',
-value: '0x0',
-v: '0x3d',
-r: '0x1ec191ef20b0e9628c4397665977cbe7a53a263c04f6f185132b77fa0fd5ca44',
-s: '0x8a58e00c63e05cfeae4f1cf19f05ce82079dc4d5857e2cc281b7797d58b5faf'
-}]
+  "id":1,
+  "jsonrpc":"2.0",
+  "result": [{
+    blockHash: '0x0000000000000000000000000000000000000000000000000000000000000000',
+    blockNumber: null,
+    from: '0x28bdb9c230f4d5e45435e4d006326ee32e46cb31',
+    gas: '0x204734',
+    gasPrice: '0x4a817c800',
+    hash: '0x8dfa6a59307a490d672494a171feee09db511f05e9c097e098edc2881f9ca4f6',
+    input: '0x6080604052600',
+    nonce: '0x12',
+    to: null,
+    transactionIndex: '0x0',
+    value: '0x0',
+    v: '0x3d',
+    r: '0xaabc9ddafffb2ae0bac4107697547d22d9383667d9e97f5409dd6881ce08f13f',
+    s: '0x69e43116be8f842dcd4a0b2f760043737a59534430b762317db21d9ac8c5034'
+  },....,{
+    blockHash: '0x0000000000000000000000000000000000000000000000000000000000000000',
+    blockNumber: null,
+    from: '0x28bdb9c230f4d5e45435e4d006326ee32e487b31',
+    gas: '0x205940',
+    gasPrice: '0x4a817c800',
+    hash: '0x8e4340ea3983d86e4b6c44249362f716ec9e09849ef9b6e3321140581d2e4dac',
+    input: '0xe4b6c4424936',
+    nonce: '0x14',
+    to: null,
+    transactionIndex: '0x0',
+    value: '0x0',
+    v: '0x3d',
+    r: '0x1ec191ef20b0e9628c4397665977cbe7a53a263c04f6f185132b77fa0fd5ca44',
+    s: '0x8a58e00c63e05cfeae4f1cf19f05ce82079dc4d5857e2cc281b7797d58b5faf'
+  }]
 }
 ```
 
@@ -1298,10 +1312,10 @@ Creates a filter object, based on filter options, to notify when the state chang
 
 ```
 params: [{
-"fromBlock": "0x1",
-"toBlock": "0x2",
-"address": "0x8888f1f195afa192cfee860698584c030f4c9db1",
-"topics": ["0x000000000000000000000000a94f5374fce5edbc8e2a8697c15331677e6ebf0b", null, ["0x000000000000000000000000a94f5374fce5edbc8e2a8697c15331677e6ebf0b", "0x0000000000000000000000000aff3454fce5edbc8cca8697c15331677e6ebccc"]]
+  "fromBlock": "0x1",
+  "toBlock": "0x2",
+  "address": "0x8888f1f195afa192cfee860698584c030f4c9db1",
+  "topics": ["0x000000000000000000000000a94f5374fce5edbc8e2a8697c15331677e6ebf0b", null, ["0x000000000000000000000000a94f5374fce5edbc8e2a8697c15331677e6ebf0b", "0x0000000000000000000000000aff3454fce5edbc8cca8697c15331677e6ebccc"]]
 }]
 ```
 
@@ -1316,9 +1330,9 @@ params: [{
 curl -X POST --data '{"jsonrpc":"2.0","method":"eth_newFilter","params":[{"topics":["0x0000000000000000000000000000000000000000000000000000000012341234"]}],"id":73}'
 // Result
 {
-"id":1,
-"jsonrpc": "2.0",
-"result": "0x1" // 1
+  "id":1,
+  "jsonrpc": "2.0",
+  "result": "0x1" // 1
 }
 ```
 
@@ -1337,9 +1351,9 @@ Creates a filter in the node, to notify when a new block arrives. To check if th
 curl -X POST --data '{"jsonrpc":"2.0","method":"eth_newBlockFilter","params":[],"id":73}'
 // Result
 {
-"id":1,
-"jsonrpc": "2.0",
-"result": "0x1" // 1
+  "id":1,
+  "jsonrpc": "2.0",
+  "result": "0x1" // 1
 }
 ```
 
@@ -1358,9 +1372,9 @@ Creates a filter in the node, to notify when new pending transactions arrive. To
 curl -X POST --data '{"jsonrpc":"2.0","method":"eth_newPendingTransactionFilter","params":[],"id":73}'
 // Result
 {
-"id":1,
-"jsonrpc": "2.0",
-"result": "0x1" // 1
+  "id":1,
+  "jsonrpc": "2.0",
+  "result": "0x1" // 1
 }
 ```
 
@@ -1376,7 +1390,7 @@ Additionally Filters timeout when they aren't requested with [eth_getFilterChang
 
 ```
 params: [
-"0xb" // 11
+  "0xb" // 11
 ]
 ```
 
@@ -1391,9 +1405,9 @@ params: [
 curl -X POST --data '{"jsonrpc":"2.0","method":"eth_uninstallFilter","params":["0xb"],"id":73}'
 // Result
 {
-"id":1,
-"jsonrpc": "2.0",
-"result": true
+  "id":1,
+  "jsonrpc": "2.0",
+  "result": true
 }
 ```
 
@@ -1408,7 +1422,7 @@ Parameters
 
 ```
 params: [
-"0x16" // 22
+  "0x16" // 22
 ]
 ```
 
@@ -1437,20 +1451,20 @@ params: [
 curl -X POST --data '{"jsonrpc":"2.0","method":"eth_getFilterChanges","params":["0x16"],"id":73}'
 // Result
 {
-"id":1,
-"jsonrpc":"2.0",
-"result": [{
-"logIndex": "0x1", // 1
-"blockNumber":"0x1b4", // 436
-"blockHash": "0x8216c5785ac562ff41e2dcfdf5785ac562ff41e2dcfdf829c5a142f1fccd7d",
-"transactionHash": "0xdf829c5a142f1fccd7d8216c5785ac562ff41e2dcfdf5785ac562ff41e2dcf",
-"transactionIndex": "0x0", // 0
-"address": "0x16c5785ac562ff41e2dcfdf829c5a142f1fccd7d",
-"data":"0x0000000000000000000000000000000000000000000000000000000000000000",
-"topics": ["0x59ebeb90bc63057b6515673c3ecf9438e5058bca0f92585014eced636878c9a5"]
-},{
-...
-}]
+  "id":1,
+  "jsonrpc":"2.0",
+  "result": [{
+    "logIndex": "0x1", // 1
+    "blockNumber":"0x1b4", // 436
+    "blockHash": "0x8216c5785ac562ff41e2dcfdf5785ac562ff41e2dcfdf829c5a142f1fccd7d",
+    "transactionHash": "0xdf829c5a142f1fccd7d8216c5785ac562ff41e2dcfdf5785ac562ff41e2dcf",
+    "transactionIndex": "0x0", // 0
+    "address": "0x16c5785ac562ff41e2dcfdf829c5a142f1fccd7d",
+    "data":"0x0000000000000000000000000000000000000000000000000000000000000000",
+    "topics": ["0x59ebeb90bc63057b6515673c3ecf9438e5058bca0f92585014eced636878c9a5"]
+  },{
+  ...
+  }]
 }
 ```
 
@@ -1466,7 +1480,7 @@ Returns an array of all logs matching filter with given id.
 
 ```
 params: [
-"0x16" // 22
+  "0x16" // 22
 ]
 ```
 
@@ -1505,9 +1519,15 @@ Returns an array of all logs matching a given filter object.
 params: [{
 "topics": ["0x000000000000000000000000a94f5374fce5edbc8e2a8697c15331677e6ebf0b"]
 }]
-Returns
+```
+
+**Returns**
+
 See eth_getFilterChanges
-Example
+
+**Example**
+
+```
 // Request
 curl -X POST --data '{"jsonrpc":"2.0","method":"eth_getLogs","params":[{"topics":["0x000000000000000000000000a94f5374fce5edbc8e2a8697c15331677e6ebf0b"]}],"id":74}'
 ```
@@ -1530,12 +1550,12 @@ Returns the account -and storage- values of the specified account including the 
 
 ```
 params: [
-"0x1234567890123456789012345678901234567890",
-[
-"0x0000000000000000000000000000000000000000000000000000000000000000",
-"0x0000000000000000000000000000000000000000000000000000000000000001"
-],
-"latest"
+  "0x1234567890123456789012345678901234567890",
+  [
+    "0x0000000000000000000000000000000000000000000000000000000000000000",
+    "0x0000000000000000000000000000000000000000000000000000000000000001"
+  ],
+  "latest"
 ]
 ```
 
@@ -1558,33 +1578,33 @@ params: [
 curl -X POST --data '{"jsonrpc":"2.0","method":"eth_getProof","params":["0x1234567890123456789012345678901234567890",["0x0000000000000000000000000000000000000000000000000000000000000000","0x0000000000000000000000000000000000000000000000000000000000000001"],"latest"],"id":1}' -H "Content-type:application/json"
 // Result
 {
-"jsonrpc": "2.0",
-"id": 1,
-"result": {
-"address": "0x1234567890123456789012345678901234567890",
-"accountProof": [
-"0xf90211a090dcaf88c40c7bbc95a912cbdde67c175767b31173df9ee4b0d733bfdd511c43a0babe369f6b12092f49181ae04ca173fb68d1a5456f18d20fa32cba73954052bda0473ecf8a7e36a829e75039a3b055e51b8332cbf03324ab4af2066bbd6fbf0021a0bbda34753d7aa6c38e603f360244e8f59611921d9e1f128372fec0d586d4f9e0a04e44caecff45c9891f74f6a2156735886eedf6f1a733628ebc802ec79d844648a0a5f3f2f7542148c973977c8a1e154c4300fec92f755f7846f1b734d3ab1d90e7a0e823850f50bf72baae9d1733a36a444ab65d0a6faaba404f0583ce0ca4dad92da0f7a00cbe7d4b30b11faea3ae61b7f1f2b315b61d9f6bd68bfe587ad0eeceb721a07117ef9fc932f1a88e908eaead8565c19b5645dc9e5b1b6e841c5edbdfd71681a069eb2de283f32c11f859d7bcf93da23990d3e662935ed4d6b39ce3673ec84472a0203d26456312bbc4da5cd293b75b840fc5045e493d6f904d180823ec22bfed8ea09287b5c21f2254af4e64fca76acc5cd87399c7f1ede818db4326c98ce2dc2208a06fc2d754e304c48ce6a517753c62b1a9c1d5925b89707486d7fc08919e0a94eca07b1c54f15e299bd58bdfef9741538c7828b5d7d11a489f9c20d052b3471df475a051f9dd3739a927c89e357580a4c97b40234aa01ed3d5e0390dc982a7975880a0a089d613f26159af43616fd9455bb461f4869bfede26f2130835ed067a8b967bfb80",
-"0xf90211a0395d87a95873cd98c21cf1df9421af03f7247880a2554e20738eec2c7507a494a0bcf6546339a1e7e14eb8fb572a968d217d2a0d1f3bc4257b22ef5333e9e4433ca012ae12498af8b2752c99efce07f3feef8ec910493be749acd63822c3558e6671a0dbf51303afdc36fc0c2d68a9bb05dab4f4917e7531e4a37ab0a153472d1b86e2a0ae90b50f067d9a2244e3d975233c0a0558c39ee152969f6678790abf773a9621a01d65cd682cc1be7c5e38d8da5c942e0a73eeaef10f387340a40a106699d494c3a06163b53d956c55544390c13634ea9aa75309f4fd866f312586942daf0f60fb37a058a52c1e858b1382a8893eb9c1f111f266eb9e21e6137aff0dddea243a567000a037b4b100761e02de63ea5f1fcfcf43e81a372dafb4419d126342136d329b7a7ba032472415864b08f808ba4374092003c8d7c40a9f7f9fe9cc8291f62538e1cc14a074e238ff5ec96b810364515551344100138916594d6af966170ff326a092fab0a0d31ac4eef14a79845200a496662e92186ca8b55e29ed0f9f59dbc6b521b116fea090607784fe738458b63c1942bba7c0321ae77e18df4961b2bc66727ea996464ea078f757653c1b63f72aff3dcc3f2a2e4c8cb4a9d36d1117c742833c84e20de994a0f78407de07f4b4cb4f899dfb95eedeb4049aeb5fc1635d65cf2f2f4dfd25d1d7a0862037513ba9d45354dd3e36264aceb2b862ac79d2050f14c95657e43a51b85c80",
-"0xf90171a04ad705ea7bf04339fa36b124fa221379bd5a38ffe9a6112cb2d94be3a437b879a08e45b5f72e8149c01efcb71429841d6a8879d4bbe27335604a5bff8dfdf85dcea00313d9b2f7c03733d6549ea3b810e5262ed844ea12f70993d87d3e0f04e3979ea0b59e3cdd6750fa8b15164612a5cb6567cdfb386d4e0137fccee5f35ab55d0efda0fe6db56e42f2057a071c980a778d9a0b61038f269dd74a0e90155b3f40f14364a08538587f2378a0849f9608942cf481da4120c360f8391bbcc225d811823c6432a026eac94e755534e16f9552e73025d6d9c30d1d7682a4cb5bd7741ddabfd48c50a041557da9a74ca68da793e743e81e2029b2835e1cc16e9e25bd0c1e89d4ccad6980a041dda0a40a21ade3a20fcd1a4abb2a42b74e9a32b02424ff8db4ea708a5e0fb9a09aaf8326a51f613607a8685f57458329b41e938bb761131a5747e066b81a0a16808080a022e6cef138e16d2272ef58434ddf49260dc1de1f8ad6dfca3da5d2a92aaaadc58080",
-"0xf851808080a009833150c367df138f1538689984b8a84fc55692d3d41fe4d1e5720ff5483a6980808080808080808080a0a319c1c415b271afc0adcb664e67738d103ac168e0bc0b7bd2da7966165cb9518080"
-],
-"balance": "0x0",
-"codeHash": "0xc5d2460186f7233c927e7db2dcc703c0e500b653ca82273b7bfad8045d85a470",
-"nonce": "0x0",
-"storageHash": "0x56e81f171bcc55a6ff8345e692c0f86e5b48e01b996cadc001622fb5e363b421",
-"storageProof": [
-{
-"key": "0x0000000000000000000000000000000000000000000000000000000000000000",
-"value": "0x0",
-"proof": []
-},
-{
-"key": "0x0000000000000000000000000000000000000000000000000000000000000001",
-"value": "0x0",
-"proof": []
-}
-]
-}
+  "jsonrpc": "2.0",
+  "id": 1,
+  "result": {
+    "address": "0x1234567890123456789012345678901234567890",
+    "accountProof": [
+      "0xf90211a090dcaf88c40c7bbc95a912cbdde67c175767b31173df9ee4b0d733bfdd511c43a0babe369f6b12092f49181ae04ca173fb68d1a5456f18d20fa32cba73954052bda0473ecf8a7e36a829e75039a3b055e51b8332cbf03324ab4af2066bbd6fbf0021a0bbda34753d7aa6c38e603f360244e8f59611921d9e1f128372fec0d586d4f9e0a04e44caecff45c9891f74f6a2156735886eedf6f1a733628ebc802ec79d844648a0a5f3f2f7542148c973977c8a1e154c4300fec92f755f7846f1b734d3ab1d90e7a0e823850f50bf72baae9d1733a36a444ab65d0a6faaba404f0583ce0ca4dad92da0f7a00cbe7d4b30b11faea3ae61b7f1f2b315b61d9f6bd68bfe587ad0eeceb721a07117ef9fc932f1a88e908eaead8565c19b5645dc9e5b1b6e841c5edbdfd71681a069eb2de283f32c11f859d7bcf93da23990d3e662935ed4d6b39ce3673ec84472a0203d26456312bbc4da5cd293b75b840fc5045e493d6f904d180823ec22bfed8ea09287b5c21f2254af4e64fca76acc5cd87399c7f1ede818db4326c98ce2dc2208a06fc2d754e304c48ce6a517753c62b1a9c1d5925b89707486d7fc08919e0a94eca07b1c54f15e299bd58bdfef9741538c7828b5d7d11a489f9c20d052b3471df475a051f9dd3739a927c89e357580a4c97b40234aa01ed3d5e0390dc982a7975880a0a089d613f26159af43616fd9455bb461f4869bfede26f2130835ed067a8b967bfb80",
+      "0xf90211a0395d87a95873cd98c21cf1df9421af03f7247880a2554e20738eec2c7507a494a0bcf6546339a1e7e14eb8fb572a968d217d2a0d1f3bc4257b22ef5333e9e4433ca012ae12498af8b2752c99efce07f3feef8ec910493be749acd63822c3558e6671a0dbf51303afdc36fc0c2d68a9bb05dab4f4917e7531e4a37ab0a153472d1b86e2a0ae90b50f067d9a2244e3d975233c0a0558c39ee152969f6678790abf773a9621a01d65cd682cc1be7c5e38d8da5c942e0a73eeaef10f387340a40a106699d494c3a06163b53d956c55544390c13634ea9aa75309f4fd866f312586942daf0f60fb37a058a52c1e858b1382a8893eb9c1f111f266eb9e21e6137aff0dddea243a567000a037b4b100761e02de63ea5f1fcfcf43e81a372dafb4419d126342136d329b7a7ba032472415864b08f808ba4374092003c8d7c40a9f7f9fe9cc8291f62538e1cc14a074e238ff5ec96b810364515551344100138916594d6af966170ff326a092fab0a0d31ac4eef14a79845200a496662e92186ca8b55e29ed0f9f59dbc6b521b116fea090607784fe738458b63c1942bba7c0321ae77e18df4961b2bc66727ea996464ea078f757653c1b63f72aff3dcc3f2a2e4c8cb4a9d36d1117c742833c84e20de994a0f78407de07f4b4cb4f899dfb95eedeb4049aeb5fc1635d65cf2f2f4dfd25d1d7a0862037513ba9d45354dd3e36264aceb2b862ac79d2050f14c95657e43a51b85c80",
+      "0xf90171a04ad705ea7bf04339fa36b124fa221379bd5a38ffe9a6112cb2d94be3a437b879a08e45b5f72e8149c01efcb71429841d6a8879d4bbe27335604a5bff8dfdf85dcea00313d9b2f7c03733d6549ea3b810e5262ed844ea12f70993d87d3e0f04e3979ea0b59e3cdd6750fa8b15164612a5cb6567cdfb386d4e0137fccee5f35ab55d0efda0fe6db56e42f2057a071c980a778d9a0b61038f269dd74a0e90155b3f40f14364a08538587f2378a0849f9608942cf481da4120c360f8391bbcc225d811823c6432a026eac94e755534e16f9552e73025d6d9c30d1d7682a4cb5bd7741ddabfd48c50a041557da9a74ca68da793e743e81e2029b2835e1cc16e9e25bd0c1e89d4ccad6980a041dda0a40a21ade3a20fcd1a4abb2a42b74e9a32b02424ff8db4ea708a5e0fb9a09aaf8326a51f613607a8685f57458329b41e938bb761131a5747e066b81a0a16808080a022e6cef138e16d2272ef58434ddf49260dc1de1f8ad6dfca3da5d2a92aaaadc58080",
+      "0xf851808080a009833150c367df138f1538689984b8a84fc55692d3d41fe4d1e5720ff5483a6980808080808080808080a0a319c1c415b271afc0adcb664e67738d103ac168e0bc0b7bd2da7966165cb9518080"
+    ],
+    "balance": "0x0",
+    "codeHash": "0xc5d2460186f7233c927e7db2dcc703c0e500b653ca82273b7bfad8045d85a470",
+    "nonce": "0x0",
+    "storageHash": "0x56e81f171bcc55a6ff8345e692c0f86e5b48e01b996cadc001622fb5e363b421",
+    "storageProof": [
+      {
+        "key": "0x0000000000000000000000000000000000000000000000000000000000000000",
+        "value": "0x0",
+        "proof": []
+      },
+      {
+        "key": "0x0000000000000000000000000000000000000000000000000000000000000001",
+        "value": "0x0",
+        "proof": []
+      }
+    ]
+  }
 }
 ```
 
@@ -1599,12 +1619,12 @@ Returns the current whisper protocol version.
 :::danger
 **--shh flag must be used on the node startup** otherwise you’ll have the following error:
 {
-"Jsonrpc":"2.0",
-"Id":67,
-"Error":{
-"Code":-32601,
-"message":"The method shh_version does not exist/is not available"
-}
+  "Jsonrpc":"2.0",
+  "Id":67,
+  "Error":{
+    "Code":-32601,
+    "message":"The method shh_version does not exist/is not available"
+  }
 }
 :::
 
@@ -1615,9 +1635,9 @@ Returns the current whisper protocol version.
 curl -X POST --data '{"jsonrpc":"2.0","method":"shh_version","params":[],"id":67}'
 // Result
 {
-"id":67,
-"jsonrpc": "2.0",
-"result": "2"
+  "id":67,
+"  jsonrpc": "2.0",
+  "result": "2"
 }
 ```
 
@@ -1639,12 +1659,12 @@ Sends a whisper message.
 
 ```
 params: [{
-from: "0x04f96a5e25610293e42a73908e93ccc8c4d4dc0edcfa9fa872f50cb214e08ebf61a03e245533f97284d442460f2998cd41858798ddfd4d661997d3940272b717b1",
-to: "0x3e245533f97284d442460f2998cd41858798ddf04f96a5e25610293e42a73908e93ccc8c4d4dc0edcfa9fa872f50cb214e08ebf61a0d4d661997d3940272b717b1",
-topics: ["0x776869737065722d636861742d636c69656e74", "0x4d5a695276454c39425154466b61693532"],
-payload: "0x7b2274797065223a226d6",
-priority: "0x64",
-ttl: "0x64",
+  from: "0x04f96a5e25610293e42a73908e93ccc8c4d4dc0edcfa9fa872f50cb214e08ebf61a03e245533f97284d442460f2998cd41858798ddfd4d661997d3940272b717b1",
+  to: "0x3e245533f97284d442460f2998cd41858798ddf04f96a5e25610293e42a73908e93ccc8c4d4dc0edcfa9fa872f50cb214e08ebf61a0d4d661997d3940272b717b1",
+  topics: ["0x776869737065722d636861742d636c69656e74", "0x4d5a695276454c39425154466b61693532"],
+  payload: "0x7b2274797065223a226d6",
+  priority: "0x64",
+  ttl: "0x64",
 }]
 ```
 
@@ -1659,8 +1679,8 @@ ttl: "0x64",
 curl -X POST --data '{"jsonrpc":"2.0","method":"shh_post","params":[{"from":"0xc931d93e97ab07fe42d923478ba2465f2..","topics": ["0x68656c6c6f20776f726c64"],"payload":"0x68656c6c6f20776f726c64","ttl":1,"priority":"0x64"}],"id":73}'
 // Result
 {
-"id":1,
-"jsonrpc":"2.0",
-"result": true
+  "id":1,
+  "jsonrpc":"2.0",
+  "result": true
 }
 ```
