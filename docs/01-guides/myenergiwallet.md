@@ -19,7 +19,7 @@ This tutorial explains how to use MyEnergiWallet (MEW), **our new Gen 3 Wallet**
 :::
 ![certification.png](docs/assets/images/certification.png =400x)
 :::note
-- [MyEnergiWallet *Web version*](https://wallet.energi.network/){target="_blank"}
+- [MyEnergiWallet *Web version*](https://wallet.energi.network/)
 :::
 # 2 - Create a new wallet
 **2.1 -** Let's get started by clicking on <kbd>CREATE WALLET</kbd>.
