@@ -1,6 +1,6 @@
 ---
 id: intro
-title: About GMI
+title: About Energi
 ---
 
 # Welcome to GMI Marketplace

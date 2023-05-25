@@ -1,4 +1,4 @@
-# GMI Marketplace Documents
+# Energi Core Documents
 
 ## Requirements
 - node >=v16.14

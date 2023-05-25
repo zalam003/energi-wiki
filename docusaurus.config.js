@@ -14,7 +14,7 @@ const config = {
   onBrokenMarkdownLinks: 'warn',
   favicon: 'img/favicon.svg',
   organizationName: 'Energi', // Usually your GitHub org/user name.
-  projectName: 'EnergiDoc', // Usually your repo name.
+  projectName: 'EnergiWiki', // Usually your repo name.
 
   presets: [
     [
@@ -94,7 +94,7 @@ const config = {
             title: 'ABOUT',
             items: [
               {
-                label: 'Welcome To GMI',
+                label: 'Welcome To Energi',
                 to: '/docs/about',
               },
             ],
@@ -143,7 +143,7 @@ const config = {
             ],
           },
         ],
-        copyright: `© ${new Date().getFullYear()} Gonnamakeit. Built with Docusaurus.`,
+        copyright: `© ${new Date().getFullYear()} Energi Core Ltd. All rights reserved. Built with Docusaurus.`,
       },
       prism: {
         theme: lightCodeTheme,
