@@ -17,7 +17,7 @@ This tutorial explains how to use MyEnergiWallet (MEW), **our new Gen 3 Wallet**
 **If you choose to use the web version, make sure to ALWAYS verify the URL and the SSL certificate.**
 :::
 
-![certification.png](docs/assets/images/certification.png =400x)
+<img src="docs/assets/images/certification.png" width="400"/>
 
 :::note
 - [MyEnergiWallet *Web version*](https://wallet.energi.network/)
