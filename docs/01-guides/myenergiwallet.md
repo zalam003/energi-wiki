@@ -17,23 +17,31 @@ This tutorial explains how to use MyEnergiWallet (MEW), **our new Gen 3 Wallet**
 **If you choose to use the web version, make sure to ALWAYS verify the URL and the SSL certificate.**
 :::
 
-<img src="docs/assets/images/certification.png" width="400"/>
+<img src="/docs/assets/images/certification.png" width="400"/>
 
 :::note
-- [MyEnergiWallet *Web version*](https://wallet.energi.network/)
+[MyEnergiWallet *Web version*](https://wallet.energi.network/)
 :::
 
 # 2 - Create a new wallet
 
 **2.1 -** Let's get started by clicking on CREATE WALLET.
-![create-mew.png](docs/assets/images/create-mew.png =500x)
-![generate.png](docs/assets/images/generate.png =500x)
+
+<img src="/docs/assets/images/create-mew.png" width="500"/>
+
+<img src="/docs/assets/images/generate.png" width="500"/>
+
 **2.2 -** We recommend selecting the Keystore File option, as it's easier to transfer between our different wallets.
-![keystore.png](docs/assets/images/keystore.png =500x)
+
+<img src="/docs/assets/images/keystore.png" width="500"/>
+
 **2.3 -** Choose a strong password as it's used to encrypt your wallet. Make sure to write it down on paper, and store it in a safe place.
-![password.png](docs/assets/images/password.png =500x)
+
+<img src="/docs/assets/images/password.png" width="500"/>
+
 **2.4 -** Save your keystore file and again, save it in a safe place.
-![save-file.png](docs/assets/images/save-file.png =500x)
+
+<img src="/docs/assets/images/save-file.png" width="500"/>
 
 **2.5 -** On the next screen you will be able to save your wallet as a paper wallet, and your private keys if you want to.
 
@@ -41,7 +49,7 @@ This tutorial explains how to use MyEnergiWallet (MEW), **our new Gen 3 Wallet**
 **Safest option is to print your Paper wallet and store it in a safe place.**
 :::
 
-![paperwallet.png](docs/assets/images/paperwallet.png =500x)
+<img src="/docs/assets/images/paperwallet.png" width="500"/>
 
 :::tip Success
 **Congratulations, you successfully created your new wallet!**
@@ -49,7 +57,7 @@ This tutorial explains how to use MyEnergiWallet (MEW), **our new Gen 3 Wallet**
 
 # 3 - The 3-2-1 Backup rule
 
-![whatis-pillar_321_backup.png](docs/assets/images/whatis-pillar_321_backup.png =500x)
+<img src="/docs/assets/images/whatis-pillar_321_backup.png" width="500"/>
 
 :::info
 **The 3-2-1 Backup rule consist of :**
