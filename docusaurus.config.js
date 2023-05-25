@@ -53,7 +53,7 @@ const config = {
         title: '',
         logo: {
           alt: 'Energi Logo',
-          src: 'img/gmi-logo-light.svg',
+          src: 'img/Energi-logo-white.png',
         },
         items: [
           // {to: '/blog', label: 'Blog', position: 'left'},
