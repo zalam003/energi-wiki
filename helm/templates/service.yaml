@@ -1,0 +1,14 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: {{ include "energi-docs.fullname" . }}
+  labels:
+    {{- include "energi-docs.labels" . | nindent 4 }}
+spec:
+  type: {{ .Values.service.type }}
+  ports:
+    - port: {{ .Values.service.port }}
+      targetPort: {{ .Values.container.ports.docusaurusPort }}
+      protocol: TCP
+  selector:
+    {{- include "energi-docs.selectorLabels" . | nindent 4 }}

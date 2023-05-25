@@ -1,0 +1,94 @@
+# Default values for energi-front.
+# This is a YAML-formatted file.
+# Declare variables to be passed into your templates.
+
+fullnameOverride: ${APP_PROJECT}-${APP_NAME}-${APP_ENV}
+replicaCount: 1
+
+deploymentStrategy:
+  rollingUpdate:
+    maxSurge: 1
+    maxUnavailable: 20%
+
+image:
+  repository: ${AWS_ECR}/${REPOSITORY_NAME}
+  pullPolicy: Always
+  # Overrides the image tag whose default is the chart appVersion.
+  # line 19 needs to be updated to "tag : testnet-${CI_COMMIT_SHORT_SHA}"
+  tag: mainnet-${CI_COMMIT_SHORT_SHA}
+
+imagePullSecrets: []
+
+serviceAccount:
+  # Specifies whether a service account should be created
+  create: true
+  # Annotations to add to the service account
+  annotations: {}
+  # The name of the service account to use.
+  # If not set and create is true, a name is generated using the fullname template
+  name: ""
+
+podSecurityContext:
+  {}
+  # fsGroup: 2000
+
+securityContext:
+  {}
+  # capabilities:
+  #   drop:
+  #   - ALL
+  # readOnlyRootFilesystem: true
+  # runAsNonRoot: true
+  # runAsUser: 1000
+
+container:
+  ports:
+    docusaurusPort: 3000
+
+service:
+  type: ClusterIP
+  port: 3000
+  # port used to expose the nginx web server, by default the http port is 80
+
+ingress:
+  enabled: true
+  albName: eks-ingress-nft-mainnet-external
+  groupName: eks-ingress-nft-mainnet-external
+  dns: ${APP_DNS}
+  certificatearn: ${CERTIFICATE_ARN}
+  cfSecurityGroup: true
+  securityGroupId: "sg-095a970b7cecb500d, sg-06bd1982d92c76294"
+  scheme: "internet-facing"
+
+resources:
+  # We usually recommend not to specify default resources and to leave this as a conscious
+  # choice for the user. This also increases chances charts run on environments with little
+  # resources, such as Minikube. If you do want to specify resources, uncomment the following
+  # lines, adjust them as necessary, and remove the curly braces after 'resources:'.
+  limits:
+    cpu: 1000m
+    memory: 1024Mi
+  requests:
+    cpu: 100m
+    memory: 128Mi
+
+autoscaling:
+  enabled: false
+  minReplicas: 1
+  maxReplicas: 1
+  targetCPUUtilizationPercentage: 90
+#  targetMemoryUtilizationPercentage: 80
+
+metrics:
+  enabled: true
+
+nodeSelector: { appType: standard }
+
+tolerations: []
+
+affinity: {}
+
+envVariables:
+
+envSecret:
+

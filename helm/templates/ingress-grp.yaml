@@ -1,0 +1,34 @@
+{{- if .Values.ingress.enabled }}
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: {{ include "energi-docs.fullname" . }}-ingress-grp
+  labels:
+  {{- include "energi-docs.labels" . | nindent 4 }}
+  annotations:
+    alb.ingress.kubernetes.io/scheme: {{ .Values.ingress.scheme }}
+    alb.ingress.kubernetes.io/load-balancer-name: {{ .Values.ingress.albName }} 
+    alb.ingress.kubernetes.io/group.name: {{ .Values.ingress.groupName }}
+    alb.ingress.kubernetes.io/target-type: ip
+    alb.ingress.kubernetes.io/healthcheck-protocol: HTTP
+    alb.ingress.kubernetes.io/healthcheck-port: {{ .Values.container.ports.docusaurusPort | squote }}
+    alb.ingress.kubernetes.io/certificate-arn: {{ .Values.ingress.certificatearn }}
+    external-dns.alpha.kubernetes.io/hostname:  {{ .Values.ingress.dns }}
+    alb.ingress.kubernetes.io/listen-ports: '[{"HTTP": 80}, {"HTTPS":443}]'
+    alb.ingress.kubernetes.io/actions.ssl-redirect: '443'
+    {{- if .Values.ingress.cfSecurityGroup }}
+    alb.ingress.kubernetes.io/security-groups: {{ .Values.ingress.securityGroupId }}
+    {{- end }}
+spec:
+  ingressClassName: alb
+  rules:
+  - host:  {{ .Values.ingress.dns }}
+    http:
+      paths:
+       - pathType: ImplementationSpecific
+         backend:
+          service:
+            name: {{ include "energi-docs.fullname" . }}
+            port: 
+              number: {{ .Values.service.port }}
+{{- end -}}
