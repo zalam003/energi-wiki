@@ -46,5 +46,5 @@ pages:
   only:
     - main
   environment:
-    name: stage
+    name: energi-wiki
     url: https://zalam003.gitlab.io
