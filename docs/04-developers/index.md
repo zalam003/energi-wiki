@@ -15,10 +15,14 @@ Web 2.0 emerged in 2004, introducing a read-write platform where users could gen
 Web3 represents an improved internet experience, focusing on empowering users through technologies like blockchains, cryptocurrencies, and NFTs. It aims to transition into a read-write-own paradigm, granting users ownership and control over their digital assets and data.
 
 Web3 follows key principles:
-    a. **Decentralization**: Ownership is distributed among builders and users, creating a more inclusive and democratic online environment.
-    b. **Permissionless**: Anyone can participate and contribute to Web3, removing barriers and exclusions.
-    c. **Native Payments**: Web3 enables direct transactions using cryptocurrencies, enhancing efficiency and accessibility.
-    d. **Trustless**: Web3 operates through incentives and economic mechanisms, reducing the need for blind trust and promoting security.
+
+a. **Decentralization**: Ownership is distributed among builders and users, creating a more inclusive and democratic online environment.
+
+b. **Permissionless**: Anyone can participate and contribute to Web3, removing barriers and exclusions.
+
+c. **Native Payments**: Web3 enables direct transactions using cryptocurrencies, enhancing efficiency and accessibility.
+
+d. **Trustless**: Web3 operates through incentives and economic mechanisms, reducing the need for blind trust and promoting security.
 
 A dApp (Decentralized Application) is a type of Web3 app that operates on decentralization principles. While all dApps are Web3 apps, not all Web3 apps are decentralized. dApps distribute authority using mechanisms like Decentralized Autonomous Organizations (DAOs), fostering transparency, inclusivity, and user empowerment.
 
@@ -38,11 +42,11 @@ Additionally, Energi offers improved performance, low gas fees, user security, a
 ## 3. Development Frameworks
 There are several EVM-compatible frameworks available for building decentralized applications (dApps), including those that can also be used with the Energi EVM. Here are a few popular options:
 
-    a. **Truffle**: [Truffle](https://trufflesuite.com/truffle/) is a widely used development framework for Ethereum-based dApps. It provides a suite of tools for compiling, deploying, and testing smart contracts. Truffle's compatibility with the Energi EVM allows developers to leverage its features and benefits when building dApps on the Energi blockchain.
+a. **Truffle**: [Truffle](https://trufflesuite.com/truffle/) is a widely used development framework for Ethereum-based dApps. It provides a suite of tools for compiling, deploying, and testing smart contracts. Truffle's compatibility with the Energi EVM allows developers to leverage its features and benefits when building dApps on the Energi blockchain.
 
-    b. **Hardhat**: [Hardhat](https://hardhat.org/) is a flexible and extensible development environment for Ethereum dApps. It offers a rich set of features, including built-in tasks, testing utilities, and plugin support. Hardhat's compatibility with the Energi EVM enables developers to utilize its powerful toolset for smart contract development on the Energi blockchain.
+b. **Hardhat**: [Hardhat](https://hardhat.org/) is a flexible and extensible development environment for Ethereum dApps. It offers a rich set of features, including built-in tasks, testing utilities, and plugin support. Hardhat's compatibility with the Energi EVM enables developers to utilize its powerful toolset for smart contract development on the Energi blockchain.
 
-    c. **Web3j**: [Web3j](https://www.web3labs.com/web3j-sdk) is a Java library that enables developers to interact with the Energi blockchain, simplifying tasks such as deploying smart contracts, managing digital assets, and executing transactions. It provides a user-friendly interface and a comprehensive set of tools for building decentralized applications (dApps) and integrating blockchain functionality into Java applications.
+c. **Web3j**: [Web3j](https://www.web3labs.com/web3j-sdk) is a Java library that enables developers to interact with the Energi blockchain, simplifying tasks such as deploying smart contracts, managing digital assets, and executing transactions. It provides a user-friendly interface and a comprehensive set of tools for building decentralized applications (dApps) and integrating blockchain functionality into Java applications.
 
 d. **OpenZeppelin SDK**: [OpenZeppelin](https://github.com/OpenZeppelin/openzeppelin-contracts) is not a framework in itself but rather a library of reusable and secure smart contracts. It offers a collection of pre-audited and community-reviewed contracts that developers can utilize in their dApps. OpenZeppelin's compatibility with the Energi EVM allows developers to use its secure and reliable contracts when building applications on the Energi blockchain.
 
