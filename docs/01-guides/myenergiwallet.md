@@ -56,7 +56,7 @@ title: MyEnergiWallet Guide
 Now that you have a MyEnergiWallet ready, you can install the Energi Core Node Software :
 **-** Core Node on Windows
 
-[<img border="0" alt="core-node-windows" src="docs/assets/images/nrg-btn.png" width="100">](advanced/core-node-windows)
+
 
 **-** Core Node on MacOS
 
