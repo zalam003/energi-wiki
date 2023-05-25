@@ -7,6 +7,17 @@ stages:
 test:
   stage: test
   script:
+  - mkdir website
+  - mv blog website/.
+  - mv docs website/.
+  - mv src website/.
+  - mv static website/.
+  - mv babel.config.js website/.
+  - mv docusaurus.config.js website/.
+  - mv package.json website/.
+  - mv sidebars.js website/.
+  - mv yarn.lock website/.
+  - cd website
   - yarn install
   - yarn build
   except:
@@ -15,6 +26,17 @@ test:
 pages:
   stage: deploy
   script:
+  - mkdir website
+  - mv blog website/.
+  - mv docs website/.
+  - mv src website/.
+  - mv static website/.
+  - mv babel.config.js website/.
+  - mv docusaurus.config.js website/.
+  - mv package.json website/.
+  - mv sidebars.js website/.
+  - mv yarn.lock website/.
+  - cd website
   - yarn install
   - yarn build
   - mv ./build ../public
