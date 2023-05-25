@@ -7,7 +7,7 @@ const FeatureList = [
   {
     title: 'About',
     Svg: require('@site/static/img/faq.svg').default,
-    link: '$baseUrl/docs/about',
+    link: '/docs/about',
     description: (
       <>
         What is Energi?
@@ -17,7 +17,7 @@ const FeatureList = [
   {
     title: 'Energi Guides',
     Svg: require('@site/static/img/guides.svg').default,
-    link: '$baseUrl/docs/guides',
+    link: '/docs/guides',
     description: (
       <>
         Everything related to Energi Core.
@@ -27,7 +27,7 @@ const FeatureList = [
   {
     title: 'For Developers',
     Svg: require('@site/static/img/for-developers.svg').default,
-    link: '$baseUrl/docs/developers',
+    link: '/docs/developers',
     description: (
       <>
         Developers documentation for all those tech-savvy.
