@@ -19,7 +19,6 @@ test:
   - mv yarn.lock website/.
   - cd website
   - yarn install
-  - npx update-browserslist-db@latest
   - yarn build
   except:
     - main
@@ -39,7 +38,6 @@ pages:
   - mv yarn.lock website/.
   - cd website
   - yarn install
-  - npx update-browserslist-db@latest
   - yarn build
   - mv ./build ../public
   artifacts:
