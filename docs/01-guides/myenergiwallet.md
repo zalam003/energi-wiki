@@ -17,7 +17,7 @@ This tutorial explains how to use MyEnergiWallet (MEW), **our new Gen 3 Wallet**
 **If you choose to use the web version, make sure to ALWAYS verify the URL and the SSL certificate.**
 :::
 
-<img src="/docs/assets/images/certification.png" width="400"/>
+![](../assets/images/certification.png)
 
 :::note
 [MyEnergiWallet *Web version*](https://wallet.energi.network/)
@@ -27,21 +27,21 @@ This tutorial explains how to use MyEnergiWallet (MEW), **our new Gen 3 Wallet**
 
 **2.1 -** Let's get started by clicking on CREATE WALLET.
 
-<img src="/docs/assets/images/create-mew.png" width="500"/>
+![](../assets/images/create-mew.png)
 
-<img src="/docs/assets/images/generate.png" width="500"/>
+![](../assets/images/generate.png)
 
 **2.2 -** We recommend selecting the Keystore File option, as it's easier to transfer between our different wallets.
 
-<img src="/docs/assets/images/keystore.png" width="500"/>
+![](../assets/images/keystore.png)
 
 **2.3 -** Choose a strong password as it's used to encrypt your wallet. Make sure to write it down on paper, and store it in a safe place.
 
-<img src="/docs/assets/images/password.png" width="500"/>
+![](../assets/images/password.png)
 
 **2.4 -** Save your keystore file and again, save it in a safe place.
 
-<img src="/docs/assets/images/save-file.png" width="500"/>
+![](../assets/images/save-file.png)
 
 **2.5 -** On the next screen you will be able to save your wallet as a paper wallet, and your private keys if you want to.
 
@@ -49,7 +49,7 @@ This tutorial explains how to use MyEnergiWallet (MEW), **our new Gen 3 Wallet**
 **Safest option is to print your Paper wallet and store it in a safe place.**
 :::
 
-<img src="/docs/assets/images/paperwallet.png" width="500"/>
+![](../assets/images/paperwallet.png)
 
 :::tip Success
 **Congratulations, you successfully created your new wallet!**
@@ -57,7 +57,7 @@ This tutorial explains how to use MyEnergiWallet (MEW), **our new Gen 3 Wallet**
 
 # 3 - The 3-2-1 Backup rule
 
-<img src="/docs/assets/images/whatis-pillar_321_backup.png" width="500"/>
+![](../assets/images/whatis-pillar_321_backup.png)
 
 :::info
 **The 3-2-1 Backup rule consist of :**
