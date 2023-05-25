@@ -9,7 +9,7 @@ const config = {
   title: 'Energi Core Gen 3',
   tagline: 'Welcome to the Official Energi Documentation!',
   url: 'https://zalam003.gitlab.io',
-  baseUrl: '/',
+  baseUrl: '/energi-wiki/',
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
   favicon: 'img/favicon.svg',

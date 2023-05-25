@@ -45,3 +45,6 @@ pages:
     - public
   only:
     - main
+  environment:
+    name: stage
+    url: https://zalam003.gitlab.io
