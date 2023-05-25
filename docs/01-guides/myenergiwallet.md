@@ -56,15 +56,15 @@ title: MyEnergiWallet Guide
 Now that you have a MyEnergiWallet ready, you can install the Energi Core Node Software :
 **-** Core Node on Windows
 
-
+[<img border="0" alt="core-node-windows" src="docs/assets/images/nrg-btn.png" width="100" />](advanced/core-node-windows)
 
 **-** Core Node on MacOS
 
-[<img border="0" alt="core-node-mac" src="docs/assets/images/nrg-btn.png" width="100">](<advanced/core-node-mac)
+[<img border="0" alt="core-node-mac" src="docs/assets/images/nrg-btn.png" width="100" />](<advanced/core-node-mac)
 
 **-** Core Node on Linux (VPS)
 
-[<img border="0" alt="scripted-linux-installation" src="docs/assets/images/nrg-btn.png" width="100">](advanced/scripted-linux-installation)
+[<img border="0" alt="scripted-linux-installation" src="docs/assets/images/nrg-btn.png" width="100" />](advanced/scripted-linux-installation)
 
 # Need help?
 **-** Head over our General & Keystore FAQ :
