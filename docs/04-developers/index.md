@@ -53,7 +53,7 @@ d. **OpenZeppelin SDK**: [OpenZeppelin](https://github.com/OpenZeppelin/openzepp
 These EVM-compatible frameworks, including their compatibility with the Energi EVM, provide developers with the necessary tools, libraries, and utilities to build, test, and deploy dApps on the Energi blockchains. Each framework offers unique features and advantages, allowing developers to choose the one that best suits their development preferences and project requirements.
 
 ## 4. Energi Client APIs
-- [Energi Core Node API](https://wiki.energi.world/en/api/core-node-api)
+- [Energi Core Node API](./core-node-api.md)
 - [JavaScript APIs](https://docs.google.com/document/d/12SvvrU0BxqrXBGTSTFE6PjuiITq79OuOEi0zAOR1P5I/edit#heading=h.dv3zeb6n61cv)
 - [JSON-RPC API](https://wiki.energi.world/en/api/json-rpc)
 
