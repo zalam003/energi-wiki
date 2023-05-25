@@ -12,7 +12,7 @@ const config = {
   baseUrl: '/energi-wiki/',
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
-  favicon: 'img/favicon.svg',
+  favicon: 'img/favicon.png',
   organizationName: 'Energi', // Usually your GitHub org/user name.
   projectName: 'EnergiWiki', // Usually your repo name.
 
