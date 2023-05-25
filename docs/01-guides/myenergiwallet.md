@@ -11,7 +11,7 @@ title: MyEnergiWallet Guide
 > **We highly recommend you to use the Desktop App version**
 :::
 :::note
-<!-- - [MyEnergiWallet *Download the Desktop App*](/downloads/myenergiwallet){target="_blank"} -->
+
 :::
 <br>
 :::caution
@@ -59,8 +59,7 @@ Now that you have a MyEnergiWallet ready, you can install the Energi Core Node S
 **-** Core Node on MacOS
 - [core-node-mac](advanced/core-node-mac)
 **-** Core Node on Linux (VPS)
-- [<img border="0" alt="scripted-linux-installation" src="docs/assets/images/nrg-btn.png" width="100" />](03-faq/faq)
-
+- [scripted-linux-installation](03-faq/faq)
 # Need help?
 **-** Head over our General & Keystore FAQ :
 :::note
