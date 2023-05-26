@@ -1,7 +1,10 @@
 ---
-id: dapp-manual-linux
-title: DApp Developer Manual - Linux
+id: dapp-manual
+title: DApp Developer Manual
 ---
+
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
 
 ## Getting Started
 
@@ -28,6 +31,10 @@ The purpose of this guide is to get a developer started with programming in the 
 * [React.js](https://reactjs.org/) - A JavaScript library for building user interfaces.
 * [Metamask Browser Extension](https://docs.google.com/document/d/1SHJClzgSmZWgQnGAo7XaCxsj7JBzkEbhExkXstbGG5k/edit#heading=h.2gw6ycmzuewu) - Extension based in Web3 that will allow you to connect to the Energi blockchain from our graphic interface and to make transactions to add new parameters to our contract
 
+```mdx-code-block
+<Tabs groupId="author-front-matter">
+<TabItem value="single" label="Linux">
+```
 
 ## Creating the Smart Contract
 
@@ -41,9 +48,9 @@ In this guide, we will create a smart contract called election. Any developer / 
 
 ### Installing Dependencies
 
-Before continuing with the contract, we will need to configure the necessary tools to program, compile and deploy the contract, as well as to create the user interface for our Decentralized Application (Dapp).
+Before continuing with the contract, we will need to configure the necessary tools to program, compile and deploy the contract, as well as to create the user interface for our Decentralized Application (dApp).
 
-This project has been compiled in an image to be executed in Docker. ([here is the repository](https://hub.docker.com/r/broje/dapp)) Go to the GitHub repository of this project for more information about how to execute it.
+This project has been compiled in an image to be executed in Docker. ([Here is the repository](https://hub.docker.com/r/broje/dapp)). Go to the GitHub repository of this project for more information about how to execute it.
 
 
 #### Start the project
@@ -55,7 +62,7 @@ At this point we will create our project with [truffle](https://www.trufflesuite
 sudo apt install npm -y
 ```
 
-![alt_text](../assets/images/image1.png)
+![alt_text](../assets/images/dapp-manual/image1.png)
 
 
 npm will install an old version of Node. Update Nodejs by running the following command:
@@ -70,7 +77,7 @@ And then:
 sudo n stable
 ```
 
-![alt_text](../assets/images/image2.png)
+![alt_text](../assets/images/dapp-manual/image2.png)
 
 
 If this does not generate any error, it means that the packages have been updated correctly. Now we will be ready to install our [Truffle](https://www.trufflesuite.com/truffle) framework to compile our contract. Execute the following command[^1]:
@@ -80,7 +87,7 @@ If this does not generate any error, it means that the packages have been update
 sudo npm install truffle -g
 ```
 
-![alt_text](../assets/images/image3.png)
+![alt_text](../assets/images/dapp-manual/image3.png)
 
 
 Execute the following command to verify that the installation has taken place successfully.
@@ -90,7 +97,7 @@ Execute the following command to verify that the installation has taken place su
 truffle version
 ```
 
-![alt_text](../assets/images/image4.png)
+![alt_text](../assets/images/dapp-manual/image4.png)
 
 
 Let's head to Desktop and create an empty folder. In our case we will use the name of energi-dapp
@@ -121,7 +128,7 @@ This will create the directory’s / file:
 Truffle-config.js: Truffle configuration file.
 
 
-![alt_text](../assets/images/image5.png)
+![alt_text](../assets/images/dapp-manual/image5.png)
 
 
 #### Text Editor
@@ -147,7 +154,7 @@ code .
 This will start Visual studio code with our project. You can also simply start VScode then drop the energi-dapp folder into the VScode interface. Next, you will see:
 
 
-![alt_text](../assets/images/image6.png)
+![alt_text](../assets/images/dapp-manual/image6.png)
 
 
 Create a .sol file with the name of our smart contract inside the contracts folder that was created at the initiation of the project. In the next section, we will program the simple contract named election.
@@ -215,20 +222,20 @@ truffle compile
 
 This will compile our contract creating the:
 
-**ABI:** ABI stands for Application Binary Interface. A smart contract is stored as bytecode (= binary data) in the blockchain under a specific address also known as contract address. The ABI is needed to access the bytecode and interact with the contract either from MyEnergiWallet or from our Dapp’s graphic interface.
+**ABI:** ABI stands for Application Binary Interface. A smart contract is stored as bytecode (= binary data) in the blockchain under a specific address also known as contract address. The ABI is needed to access the bytecode and interact with the contract either from MyEnergiWallet or from our dApp’s graphic interface.
 
 **Byte code:** The code of the contract that the blockchain understands which allows us to deploy the smart contract on the Energi Blockchain.
 
 The next message will indicate that the contract has been compiled successfully. 
 
 
-![alt_text](../assets/images/image7.png)
+![alt_text](../assets/images/dapp-manual/image7.png)
 
 
 From the VScode interface, we will see that the build and contracts directories are created. Inside these directories you will see a .json file with the name of the contract. In our case it will be election.json.
 
 
-![alt_text](../assets/images/image8.png)
+![alt_text](../assets/images/dapp-manual/image8.png)
 
 
 In this .json file we will find the ABI and the byte code.
@@ -284,25 +291,25 @@ In this .json file we will find the ABI and the byte code.
 In the Tools section of MyEnergiWallet (web version), or the contracts section in the Desktop version, we will see options for Interact / Deploy the contract. To make the deployment on the main Blockchain, only use MyEnergiWallet under the [main network](https://wallet.energi.network/account).
 
 
-![alt_text](../assets/images/image9.png)
+![alt_text](../assets/images/dapp-manual/image9.png)
 
 
 We will use the Deploy section to upload our contract to the Energi Blockchain. First we will have to log in to our Energi account. We will use same access method available in the MyEnergiWallet under the Deploy section
 
 
-![alt_text](../assets/images/image10.png)
+![alt_text](../assets/images/dapp-manual/image10.png)
 
 
 Once we access the account, an interface will be displayed where we will have to add the string of the Byte code and sign / confirm the transaction to Deploy the contract on the Energi Blockchain
 
 
-![alt_text](../assets/images/image11.png)
+![alt_text](../assets/images/dapp-manual/image11.png)
 
 
 MyEnergiWallet shows us a transaction Hash once the transaction has at least 1 confirmation on the network. Check it on the [Explorer](https://explorer.test.energi.network/). You will see the [address of the contract](https://explorer.test.energi.network/tx/0x7de59b7d1ffc0b5ca00b22ae470777482232c07995d37d3539fa66c7f4fd76ba/internal_transactions) if it was deployed successfully. You will need this address to interact with the contract in the Blockchain
 
 
-![alt_text](../assets/images/image12.png)
+![alt_text](../assets/images/dapp-manual/image12.png)
 
 
 Contract address:
@@ -322,17 +329,17 @@ We will create a new project with React called interface, in which we will compi
 npx create-react-app interface
 ```
 
-![alt_text](../assets/images/image13.png)
+![alt_text](../assets/images/dapp-manual/image13.png)
 
 
 This will create our project called interface with the necessary modules for our Web App.
 
 We will start our interface project from VScode. You can do it graphically by dropping the interface folder into the VScode program or from the terminal by going to the project directory and running the `code .` command.
 
-React.js includes some files as examples for developers that we will not need for our Dapp and will have to remove them. In the following image you can see the files we will delete.
+React.js includes some files as examples for developers that we will not need for our dApp and will have to remove them. In the following image you can see the files we will delete.
 
 
-![alt_text](../assets/images/image14.png)
+![alt_text](../assets/images/dapp-manual/image14.png)
 
 Be sure to delete only these files. Deleting any other files or folders may cause problems when compiling our user interface.
 
@@ -343,13 +350,13 @@ Be sure to delete only these files. Deleting any other files or folders may caus
 npm i web3 @energi/web3-ext
 ```
 
-![alt_text](../assets/images/image15.png)
+![alt_text](../assets/images/dapp-manual/image15.png)
 
 
 This will add the @energi/web3-ext module to our project:
 
 
-![alt_text](../assets/images/image16.png)
+![alt_text](../assets/images/dapp-manual/image16.png)
 
 
 ### Compiling Code
@@ -369,7 +376,7 @@ In VScode, edit the index.html file on the public directory. This will be a basi
     <meta chartset="UTF-8"/>
 
     <!-- title for our browser tab -->
-    <title>Energi - Dapp</title>
+    <title>Energi - dApp</title>
 
     <!-- this CDN will reduce our code and add some styles to our interface -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
@@ -398,7 +405,7 @@ In VScode, edit the index.html file on the public directory. This will be a basi
 
 #### **App.js**
 
-In this file we will compile our [JSX](https://reactjs.org/docs/introducing-jsx.html#why-jsx) code for our user interface, as well as compiling the components and functions for our final Dapp.
+In this file we will compile our [JSX](https://reactjs.org/docs/introducing-jsx.html#why-jsx) code for our user interface, as well as compiling the components and functions for our final dApp.
 
 We will need to import the modules and files we will work with:
 
@@ -496,14 +503,14 @@ handleLoadContract() {
 }
 ```
 
-At this point, we will start to create the components for our user interface that will be rendered in our Dapp. In the next image we can understand it graphically
+At this point, we will start to create the components for our user interface that will be rendered in our dApp. In the next image we can understand it graphically
 
-![alt_text](../assets/images/image17.png)
+![alt_text](../assets/images/dapp-manual/image17.png)
 
 
-In the red box we see the navigation section. In this section we can add a link to the documentation on how to create our Dapp which was created with the &lt;nav> tag.
+In the red box we see the navigation section. In this section we can add a link to the documentation on how to create our dApp which was created with the &lt;nav> tag.
 
-The biggest section can be seen in the dark green box, which was sectioned with a &lt;div> tag. This section contains the whole body of our Dapp.
+The biggest section can be seen in the dark green box, which was sectioned with a &lt;div> tag. This section contains the whole body of our dApp.
 
 The light green box allows us to set a value in our contract which has been created with an &lt;input> tag.
 
@@ -516,7 +523,7 @@ The yellow box refers to a variable called from the index.css file which contain
 Here is our code:
 
 ```
-// Dapp rendering
+// dApp rendering
 
 render() {
   return (
@@ -557,7 +564,7 @@ Now we will add an input tag which we will use to enter some value we wish to ch
 </div>
 ```
 
-This will be the end of our code for this file. We will add an Energi logo from the index.css file to add a bit of aesthetics to our Dapp.
+This will be the end of our code for this file. We will add an Energi logo from the index.css file to add a bit of aesthetics to our dApp.
 
 ```
 <div className="logo"> </div>
@@ -650,7 +657,7 @@ handleLoadContract() {
 
 }
 
-// Dapp rendering
+// dApp rendering
 
 render() {
   return (
@@ -762,4 +769,17 @@ body {
   background: linear-gradient(to right, #ffffff, #abbaab); 
   ;
 }
+```
+
+
+```mdx-code-block
+</TabItem>
+<TabItem value="multiple" label="Windows">
+```
+
+## Windows Doc goes here
+
+```mdx-code-block
+</TabItem>
+</Tabs>
 ```
