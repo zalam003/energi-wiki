@@ -15,7 +15,7 @@ These instances can be created/re-created quicker than manually compiling and/or
 
 The Docker engine for Windows, Mac OS and Linux can be downloaded and installed as follows:
 
-* **Windows & Mac OS: **
+* **Windows & Mac OS:**
 
 **[https://www.docker.com/products/docker-desktop](https://www.docker.com/products/docker-desktop)**
 
