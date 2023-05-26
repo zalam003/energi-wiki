@@ -21,10 +21,7 @@ The Docker engine for Windows, Mac OS and Linux can be downloaded and installed 
 
 * **Linux (Ubuntu):**
 
-**	**
-
-**	**Open a new terminal session and install with:
-
+Open a new terminal session and install with:
 
 ```
 apt-get install docker.io
@@ -120,8 +117,6 @@ To check that your image has been successfully created and named, you can run th
 ```
 docker images
 ```
-
-
 
 ### 3.3 Bootstrap Chaindata (Optional)
 
