@@ -1,6 +1,6 @@
 ---
-id: testnet-core-node-docker
-title: Testnet Energi Core Node Docker Deployment Guide
+id: core-node-testnet-docker
+title: Energi Core Node Testnet Docker Deployment Guide
 ---
 
 ## ​1.​ Introduction
