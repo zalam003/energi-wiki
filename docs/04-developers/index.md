@@ -33,11 +33,11 @@ Additionally, Energi offers improved performance, low gas fees, user security, a
 
 ## 2. Development Networks
 ### 2.1. Testnet Environment
-- [Set up Testnet environment using Docker](https://docs.google.com/document/d/1uZKARyR1GQ97gvFrtcMRvBqE7nj_fTBsZUIvR-J2okU/)
+- [Set up Testnet environment using Docker](../04-developers/testnet-core-node-docker.md)
 - [Energi Testnet Faucet](https://faucet.energi.network/) - Get some tNRG for testing.
 
 ### 2.2. Simnet Environment
-- [Set up Simnet Environment](https://docs.google.com/document/d/1ncHUnQlCcc4oyBQufUe5jPUMZ7G5dGoHMZrEDkkniIY)
+- [Set up Simnet Environment](../04-developers/simnet-core-node.md)
 
 ## 3. Development Frameworks
 There are several EVM-compatible frameworks available for building decentralized applications (dApps), including those that can also be used with the Energi EVM. Here are a few popular options:
