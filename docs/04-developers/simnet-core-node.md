@@ -3,7 +3,8 @@ id: core-node-simnet
 title: Energi Core Node Simnet Deployment Guide
 ---
 
-**In addition to the current mainnet and testnet networks, a third network version has been added with the goal of creating a network that is easy to test features on without requiring a hard fork of the previous network instance. Simnet network activated by setting `--simnet` flag fits the bill.
+## Introduction
+In addition to the current mainnet and testnet networks, a third network version has been added with the goal of creating a network that is easy to test features on without requiring a hard fork of the previous network instance. Simnet network activated by setting `--simnet` flag fits the bill.
 
 Its easy to set up and tear down a simnet network because:
 
@@ -12,20 +13,16 @@ Its easy to set up and tear down a simnet network because:
 2. No migration file setting is necessary because a special migration tx is created to help process the migration block on simnet.
 3. It has no default bootnodes unlike all the other networks.
 
-**Setting up the Simnet network.**
+## Setting up the Simnet network.
 
 A minimum of two nodes to run the simnet network are required with one of them being selected as the bootnode. Bootnode helps a node locate other nodes. Only some bootnodes that should run without a bootnode enode url set using `--bootnodes` otherwise any other node that runs without a bootnode enode url set, it will never be able to connect to the simnet network.
 
-**Important Commands.**
+### Important Commands.
 
 **_Addresses and other configs defined below here can be modified with any other valid configurations and still run as expected. The only condition is that nodes in a common network have to share a common genesis block; otherwise nodes with a different configuration will be dropped from the network._**
 
-<center>
 
-**Instructions to set up nodes**
-
-</center>
-
+## Instructions to set up nodes
 
 
 1. Create separate empty datadir directories for those two nodes let’s call them:  
@@ -60,7 +57,7 @@ We should notice that in the directory there is keystore folder where our keys a
 
 6. For this moment we have stopped node after generating account and now we need to delete blockchain data file which is `/dir-to/mining-node-datadir/energi3 `(otherwise we have have error: “**database already contains an incompatible genesis block**”)
 
-5. For this moment we can start first node by first unlocking migration signer and cpp signer addresses,  password file and  Comma separated list of contract=account pairs `--miner.dpor`:
+7. For this moment we can start first node by first unlocking migration signer and cpp signer addresses,  password file and  Comma separated list of contract=account pairs `--miner.dpor`:
 
 
 ```
@@ -69,9 +66,9 @@ We should notice that in the directory there is keystore folder where our keys a
 
 Where `0x2345a0469394815a878c7b7162d5873b8412eab9 ` and `0xc138a111703dd18500166e038245017e2f34fef0 ` are migration signer and cpp signer addresses correspondingly. 
 
-6. For running second node its directory will be the one created above `/datadir/to/non-mining-node-datadir ` and before starting we need to copy `simnet-genesis.json ` genesis file into this directory.
+8. For running second node its directory will be the one created above `/datadir/to/non-mining-node-datadir ` and before starting we need to copy `simnet-genesis.json ` genesis file into this directory.
 
-7. For running the second node we need to copy first mining node’s enode url which is printed upon starting and looks like **enode://e9c78af79305fdf6f6a5cfce17c45976afff667e634cec14f798b2eaeeb79b3627a997307542270309543f2e6d3e7f9d4bc2763e0d6ce4777edea97b020b374d@127.0.0.1:12345**.
+9. For running the second node we need to copy first mining node’s enode url which is printed upon starting and looks like **enode://e9c78af79305fdf6f6a5cfce17c45976afff667e634cec14f798b2eaeeb79b3627a997307542270309543f2e6d3e7f9d4bc2763e0d6ce4777edea97b020b374d@127.0.0.1:12345**.
 
 And run: 
 
@@ -80,8 +77,6 @@ And run:
 ```
 
 The node will start and connect created network, adding “console” flag when running the first node will open javascript environment for communicating with the network.
-
-
 
 
 Genesis block json example:
@@ -179,7 +174,7 @@ enode://c5af006a578bdcd8f77897a95637cabbd8554d0db54882768c3dc2a09aba57ecc37f46c2
 The solution to making this a valid enode url is to obtain the instance’s/machine’s remote IP address and replace the loopback address (“127.0.0.1”) with it.
 
 
-2. Run the second node:
+10. Run the second node:
 
     The second node is very important, as no blocks mining can happen without at least one peer connected to the mining node. This process can be repeated to set up as many nodes in the network as possible.
 
@@ -221,7 +216,7 @@ The solution to making this a valid enode url is to obtain the instance’s/mach
 
     _This happens if an account that was included in the genesis block presale (allocs) configuration, has balance greater than or equal to 1NRG is unlocked for staking while running through the command line arguments._
 
-3. Send a transaction:
+11. Send a transaction:
 To be able to send a transaction using a given account, unlock it first using:
 
 ```
@@ -273,7 +268,7 @@ eth.sendTransaction({'to':'0x128eaec174d59a7a77be8a77899efe8ff8469e76', 'from':'
 It’s always important to confirm if the recipient’s address exists to avoid sending coins to an incorrect address.
 
 
-4. Deposit Collateral:
+12. Deposit Collateral:
 
 If `nrg.accounts` returns:
 
@@ -296,7 +291,7 @@ masternode.depositCollateral(nrg.accounts[1], web3.toWei(10000), 'account-passwo
 
 After some few seconds the tx, could have been mined into the next block allowing one to proceed with the next operations on a masternode.
 
-5. Announce a Masternode.
+13. Announce a Masternode.
 
 
 ```
