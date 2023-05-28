@@ -1,5 +1,5 @@
 ---
-id: core-node-simnet
+id: javascript-api
 title: Web3 JavaScript API
 ---
 
@@ -3014,7 +3014,7 @@ myDeployContract.deploy().estimateGas(function(err, gas){
 #### methods
 
 
-###### myContract.methods.myMethod([param1[, param2[, ...]]])
+`myContract.methods.myMethod([param1[, param2[, ...]]])`
 
 
 Creates a transaction object for that method, which then can be called, send, estimated.
@@ -3022,9 +3022,9 @@ Creates a transaction object for that method, which then can be called, send, es
 The methods of this smart contract are available through:
 
 
-* The name: myContract.methods.myMethod(param1)
-* The name with parameters: myContract.methods['myMethod(uint256)'](param1)
-* The signature: myContract.methods['signature'](param1)
+* The name: `myContract.methods.myMethod(param1)`
+* The name with parameters: `myContract.methods['myMethod(uint256)'](param1)`
+* The signature: `myContract.methods['signature'](param1)`
 
 This allows calling functions with the same name but different parameters from the JavaScript contract object.
 
@@ -3039,7 +3039,7 @@ For details to the methods see the documentation below.
 #### methods.myMethod.call
 
 
-###### myContract.methods.myMethod([param1[, param2[, ...]]]).call(options[, callback])
+`myContract.methods.myMethod([param1[, param2[, ...]]]).call(options[, callback])`
 
 
 Will call a “constant” method and execute its smart contract method in the EVM without sending any transaction. Note: calling can not alter the smart contract state.
@@ -3107,7 +3107,7 @@ Result {
 #### methods.myMethod.send
 
 
-###### myContract.methods.myMethod([param1[, param2[, ...]]]).send(options[, callback])
+`myContract.methods.myMethod([param1[, param2[, ...]]]).send(options[, callback])`
 
 
 Will send a transaction to the smart contract and execute its method. Note: this can alter the smart contract state.
@@ -3248,7 +3248,7 @@ myContract.methods.setCount(123).send(options_object).on('transactionHash', func
 #### methods.myMethod.estimateGas
 
 
-###### myContract.methods.myMethod([param1[, param2[, ...]]]).estimateGas(options[, callback])
+`myContract.methods.myMethod([param1[, param2[, ...]]]).estimateGas(options[, callback])`
 
 
 Will estimate the gas a method execution will take when executed in the EVM without. The estimation can differ from the actual gas used when later sending a transaction, as the state of the smart contract can be different at that time.
@@ -3297,7 +3297,7 @@ myContract.methods.increaseCount().estimateGas({from: '0x8978e517c2b442264e54b89
 #### methods.myMethod.encodeABI
 
 
-###### myContract.methods.myMethod([param1[, param2[, ...]]]).encodeABI()
+`myContract.methods.myMethod([param1[, param2[, ...]]]).encodeABI()`
 
 
 Encodes the ABI for this method. This can be used to send a transaction, call a method, or pass it into another smart contracts method as arguments.
@@ -5878,7 +5878,7 @@ Will calculate the sha3 of the input but does return the hash value instead of n
 #### soliditySha3
 
 
-###### web3.utils.soliditySha3(param1 [, param2, ...])
+`web3.utils.soliditySha3(param1 [, param2, ...])`
 
 Will calculate the sha3 of given input parameters in the same way solidity would. This means arguments will be ABI converted and tightly packed before being hashed.
 
@@ -5950,7 +5950,7 @@ web3.utils.soliditySha3({t: 'string', v: 'Hello!%'}, {t: 'int8', v:-23}, {t: 'ad
 #### soliditySha3Raw
 
 
-###### web3.utils.soliditySha3Raw(param1 [, param2, ...])
+`web3.utils.soliditySha3Raw(param1 [, param2, ...])`
 
 Will calculate the sha3 of given input parameters in the same way solidity would. This means arguments will be ABI converted and tightly packed before being hashed. The difference between this function and the soliditySha3 function is that it will return the hash value instead of null if for example an empty string is given.
 
