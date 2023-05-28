@@ -54,7 +54,7 @@ These EVM-compatible frameworks, including their compatibility with the Energi E
 
 ## 4. Energi Client APIs
 - [Energi Core Node API](./core-node-api.md)
-- [JavaScript APIs](https://docs.google.com/document/d/12SvvrU0BxqrXBGTSTFE6PjuiITq79OuOEi0zAOR1P5I/edit#heading=h.dv3zeb6n61cv)
+- [JavaScript APIs](./javascript-api.md)
 - [JSON-RPC API](./json-rpc-api.md)
 
 ## 5. Integrated Development Environments (IDEs)
