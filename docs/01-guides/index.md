@@ -12,7 +12,7 @@ title: Guides
 ## Energiswap Guides
 
 - [Energiswap Quick Start](./energiswap-quickstart.md)
-- [How-to Use Energiswap on Mainnet](https://wiki.energi.world/en/guides/energiswap-mainnet)
+- [How-to Use Energiswap on Mainnet](./energiswap-mainnet.mdx)
 - [Energiswap Analytics](https://info.energiswap.exchange/)
 - [How to Buy NRG at KuCoin](https://wiki.energi.world/en/guides/purchase-nrg-on-kucoin)
 - [Trading](https://wiki.energi.world/guides/energiswap-mainnet#h_01EZQJFBH8QPPGYK167QJG1W8C)
