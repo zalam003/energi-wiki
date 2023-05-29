@@ -1,6 +1,6 @@
 ---
 id: gen2-core-wallet
-title: [Gen 2] Energi Core Wallet
+title: "[Gen 2] Energi Core Wallet"
 ---
 
 :::info
