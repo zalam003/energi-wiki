@@ -3,7 +3,7 @@ id: energiswap-quick-start
 title: Energiswap Quick Start
 ---
 
-Energiswap is incredibly simple to set up and use. All you need is MetaMask or Brave browser, an Energi wallet, and some NRG to get started. For a detailed walkthrough on setting up MetaMask and connecting to the Energi mainnet to use Energiswap, take a look at our Energiswap Guide.
+Energiswap is incredibly simple to set up and use. All you need is MetaMask or Brave browser, an Energi wallet, and some NRG to get started. For a detailed walkthrough on setting up MetaMask and connecting to the Energi mainnet to use Energiswap, take a look at our [Energiswap Guide](https://wiki.energi.world/guides/energiswap-mainnet).
 
 ## Connected to Energi Network
 
