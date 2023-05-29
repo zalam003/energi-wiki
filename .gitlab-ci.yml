@@ -40,7 +40,6 @@ pages:
   - yarn install
   - yarn build
   - mv ./build ../public
-  - echo "/energi-wiki https://energiwiki.smart-corporation.com 301" > ../public/_redirects
   artifacts:
     paths:
     - public
@@ -48,4 +47,4 @@ pages:
     - main
   environment:
     name: energi-wiki
-    url: https://zalam003.gitlab.io
+    url: https://energiwiki.smart-corporation.com
