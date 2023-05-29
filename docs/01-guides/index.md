@@ -1,5 +1,5 @@
 ---
-id: guides
+id: intro
 title: Guides
 ---
 

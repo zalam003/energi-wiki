@@ -1,5 +1,5 @@
 ---
-id: downloads
+id: intro
 title: Downloads
 ---
 
