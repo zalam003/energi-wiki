@@ -1,0 +1,57 @@
+---
+id: connect-energi-network
+title: Connect to Energi Mainnet
+---
+
+If you are a MetaMask or Brave Crypto Wallet user, this guide will provide the network specifications to add the Energi Network, which is required to access our suite of services such as [Energiswap](https://app.energiswap.exchange/) and the [Energi Bridge](https://bridge.energi.network/). **Keep in mind** that the instructions provided below are aimed at existing DeFi users who are already familiar with managing their own wallets.
+
+If you need more detailed instructions, refer to our step-by-step guides:
+
+* [Set up MetaMask on Chrome for Energi Mainnet](https://wiki.energi.world/guides/set-up-energi-mainnet-metamask-chrome)
+* [Set up MetaMask on Mobile for Energi Mainnet](https://wiki.energi.world/guides/set-up-energi-mainnet-metamask-mobile)
+* [Set up Brave Crypto Wallet for Energi Mainnet](https://wiki.energi.world/guides/set-up-energi-mainnet-brave-crypto-wallet)
+
+:::warning
+> **NOTE: Currently the Energi Bridge does not support transactions made using Brave's Crypto Wallet. We recommend using MetaMask for any Energi Bridge related transactions.**
+:::
+
+## 1. Connecting your MetaMask / Brave Crypto Wallet to the Energi Mainnet network:
+
+:::info
+> For an easy one-click configuration of Energi Mainnet on MetaMask go [here](https://www.energi.world/energiswap-quick-start/)
+:::
+
+If you want to manually add Energi Mainnet on MetaMask follow the instructions below:
+
+1.1. Navigate to your MetaMask / Brave Crypto Wallet **Settings** menu and select the **Networks** option.
+
+1.2. Click the **Add Network** button. You will be required to enter the details of a **New RPC Network**. Fill in the details with the information below, then click **Add**:
+
+<table>
+    <tr>
+        <td style="text-align: right"><strong>Network Name:</strong></td>
+        <td style="vertical-align: middle">Energi Mainnet</td>
+    </tr>
+    <tr>
+        <td style="text-align: right"><strong>New RPC URL:</strong></td>
+        <td style="vertical-align: middle">https://nodeapi.energi.network/v1/jsonrpc</td>
+    </tr>
+    <tr>
+        <td style="text-align: right"><strong>Chain ID:</strong></td>
+        <td style="vertical-align: middle">39797</td>
+    </tr>
+    <tr>
+        <td style="text-align: right"><strong>Symbol:</strong></td>
+        <td style="vertical-align: middle">NRG</td>
+    </tr>
+    <tr>
+        <td style="text-align: right"><strong>Block Explorer URL:</strong></td>
+        <td style="vertical-align: middle">https://explorer.energi.network/</td>
+    </tr>
+</table>
+
+1.3. After adding the **Energi Mainnet** network, you can freely switch back and forth from it using the list of available networks on your MetaMask / Brave Crypto Wallet.
+
+## 2. Next Steps
+
+With the **Energi Mainnet** network configured to your MetaMask / Brave Crypto Wallet, you are ready to start trading on [Energiswap](https://app.energiswap.exchange/) right away. You can also send and receive NRG and Energi-based tokens directly through your MetaMask / Brave Crypto Wallet!
