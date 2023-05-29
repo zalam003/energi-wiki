@@ -41,4 +41,3 @@ title: Guides
 
 - [Masternode Guide](https://wiki.energi.world/en/masternode-guide)
 - [Change Auto-compounding settings on Core Node](https://wiki.energi.world/en/how-to/change-autocompounding)
-
