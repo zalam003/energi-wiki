@@ -82,27 +82,27 @@ Now that you have a MyEnergiWallet ready, you can install the Energi Core Node S
 
 **-** Core Node on Windows
 
-- [core-node-windows](/docs/03-faq/index.md)
+- [core-node-windows](/docs/04-faq/index.md)
 
 **-** Core Node on MacOS
 
-- [core-node-mac](/docs/03-faq/index.md)
+- [core-node-mac](/docs/04-faq/index.md)
 
 **-** Core Node on Linux (VPS)
 
-- [scripted-linux-installation](/docs/03-faq/index.md)
+- [scripted-linux-installation](/docs/04-faq/index.md)
 
 # Need help?
 
 **-** Head over our General & Keystore FAQ :
 
 :::note
-- [FAQ *General*](/docs/03-faq/index.md)
-- [FAQ *Keystore*](/docs/03-faq/index.md)
+- [FAQ *General*](/docs/04-faq/index.md)
+- [FAQ *Keystore*](/docs/04-faq/index.md)
 :::
 
 **-** Get technical assistance :
 
 :::note
-- [Get technical assistance by the Energi team](/docs/03-faq/index.md)
+- [Get technical assistance by the Energi team](/docs/04-faq/index.md)
 :::
