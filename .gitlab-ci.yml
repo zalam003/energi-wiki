@@ -40,6 +40,7 @@ pages:
   - yarn install
   - yarn build
   - mv ./build ../public
+  - echo "/energi-wiki https://energiwiki.smart-corporation.com 301" > ../public/_redirects
   artifacts:
     paths:
     - public
