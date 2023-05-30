@@ -19,7 +19,7 @@ title: Guides
 - [Add Liquidity](./energiswap-mainnet.mdx#33-add-liquidity)
 - [Remove liquidity](./energiswap-mainnet.mdx#34-remove-liquidity)
 - [Energi Bridge](https://bridge.energi.network/)
-- [Energi Bridge Quick Start Guide](https://wiki.energi.world/en/guides/energi-bridge-quick-start)
+- [Energi Bridge Quick Start Guide](./energi-bridge-quick-start)
 - [Energi Yield Farming Quick Start Guide](https://wiki.energi.world/en/guides/energiswap-farming)
 - [Energiswap Referral Program](https://wiki.energi.world/en/guides/energiswap-referral-program)
 - [How-to Use Energiswap on Testnet](https://wiki.energi.world/en/guides/energiswap-testnet)
