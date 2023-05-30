@@ -11,7 +11,7 @@ We aim to extend this capability to support other blockchain platforms in the fu
 
 This guide is geared towards users who have a certain degree of knowledge on managing their wallets across different networks. If you need more detailed instructions on how to use the Energi Bridge, refer to our in-depth guide:
 
-* [How-to transfer tokens using Energi Bridge](https://wiki.energi.world/guides/how-to-transfer-tokens-using-energi-bridge)
+* [How-to transfer tokens using Energi Bridge](./energi-bridge-how-to.md)
 
 ## 1. Prerequisites
 Your wallet service needs to be able to connect to the Energi network in order to use the Energi Bridge. **Currently, we only support MetaMask**. You can find more information on installing and using MetaMask, as well as the required network parameters, in the following guides:
