@@ -3,9 +3,9 @@ id: energi-bridge-how-to
 title: How-to Transfer Tokens Using Energi Bridge
 ---
 
-:::warning
-> **DISCLAIMER: All assets traded on Energiswap are tokenized versions of the underlying asset that exist only on the Energi blockchain. The tokens cannot be directly sent to an Exchange. You have to transfer the tokens from the Energi network to the Ethereum network using the [Energi Bridge](https://bridge.energi.network/) before sending them to an Exchange.**
-***
+:::warning **DISCLAIMER**
+> **All assets traded on Energiswap are tokenized versions of the underlying asset that exist only on the Energi blockchain. The tokens cannot be directly sent to an Exchange. You have to transfer the tokens from the Energi network to the Ethereum network using the [Energi Bridge](https://bridge.energi.network/) before sending them to an Exchange.**
+:::
 
 Energi Bridge is a decentralized application (dApp) that connects two blockchains so that users can securely transfer ERC-20 tokens between the two networks. At this time, Energi Bridge connects the Ethereum and Energi blockchains. This connection allows users to move their ERC-20 assets from the Ethereum network to the Energi network and vice versa. The process of transferring assets from one network to another is called **Bridging**. Once assets are bridged to Ethereum to Energi, those can be traded on **[Energiswap](https://app.energiswap.exchange/)**
 
@@ -56,8 +56,8 @@ After setting up the connection to the Energi Network, you will be ready to use 
 
 ## 2. Transferring ERC-20 Tokens from Ethereum to the Energi blockchain{#bridge_eth_nrg}
 
-:::info
-> **NOTE:** To transfer any assets from the Ethereum network to Energi, the account from which you are transferring the tokens will need to have some ETH to pay for the transaction gas fee.
+:::info **NOTE**
+> To transfer any assets from the Ethereum network to Energi, the account from which you are transferring the tokens will need to have some ETH to pay for the transaction gas fee.
 :::
 
 ### 2.1. Connect the wallet to the Energi Bridge dApp
@@ -98,8 +98,8 @@ After setting up the connection to the Energi Network, you will be ready to use 
 2.4.2 Click “**Approve**”.
 2.4.3 The MetaMask approval screen will pop up after a few seconds. “Confirm” the amount to transfer. You cannot change the amount approved for transfer at this stage.
 
-:::info
-> **NOTE:** ETH is a native token on the Ethereum blockchain. There is no approval required to transfer ETH from the Ethereum blockchain.
+:::info **NOTE**
+> ETH is a native token on the Ethereum blockchain. There is no approval required to transfer ETH from the Ethereum blockchain.
 :::
 
 ![alt_text](../assets/images/bridge/image25.png)
@@ -155,7 +155,7 @@ When an ERC-20 token is transferred, it is burned on the Energi blockchain and t
 
 :::info
 > Just like the transfer from the Ethereum blockchain to the Energi blockchain, you will also need to pay for transaction gas fees when sending your tokens from the Energi blockchain to Ethereum. **Make sure to have NRG balance when transferring assets from the Energi network to the Ethereum network**.
-***
+:::
 
 ### 3.1. Open and connect your wallet to the Energi Bridge dApp
 
@@ -195,8 +195,8 @@ When an ERC-20 token is transferred, it is burned on the Energi blockchain and t
 
 3.4.3 The MetaMask approval screen will pop up after a few seconds. “**Confirm**” the amount to transfer. You cannot change the amount approved for the transfer at this stage.
 
-:::info
-> **NOTE**: NRG is a native token on the Energi blockchain. There is no approval required to transfer NRG.
+:::info **NOTE**
+> NRG is a native token on the Energi blockchain. There is no approval required to transfer NRG.
 :::
 
 ![alt_text](../assets/images/bridge/image5.png)
@@ -208,7 +208,9 @@ When an ERC-20 token is transferred, it is burned on the Energi blockchain and t
 
 ![alt_text](../assets/images/bridge/image23.png)
 
-**NOTE**: The pop-up from MetaMask may take some time to appear. Once it appears, go to the next step.
+:::info **NOTE**
+> The pop-up from MetaMask may take some time to appear. Once it appears, go to the next step.
+:::
 
 ### 3.6. Confirm the gas fee for the transaction in MetaMask.
 
@@ -224,11 +226,13 @@ The following notification will pop up if you have MetaMask notifications enable
 
 After the transaction is confirmed on the Energi blockchain, your ERC-20 tokens will be stored and locked in the TokenSafe smart contract. You will not have custody of those tokens on the Energi blockchain after that. The same amount of the token will be issued to your wallet on the Ethereum blockchain.
 
-:::info
-> **NOTE:** Keep in mind that there is a 5000 confirmation waiting period required before tokens transferred away from the Energi blockchain will be available to use on the Ethereum blockchain. **This is in place to protect Energi users from fraud and theft**.
+:::info **NOTE** 
+> Keep in mind that there is a 5000 confirmation waiting period required before tokens transferred away from the Energi blockchain will be available to use on the Ethereum blockchain. **This is in place to protect Energi users from fraud and theft**.
 :::
 
-**Congratulations! You just transferred tokens from Energi to the Ethereum blockchain.**
+:::tip **Congratulations!**
+> You just transferred tokens from Energi to the Ethereum blockchain.
+:::
 
 ### 3.7. Check the destination wallet on the Ethereum blockchain
 
@@ -242,11 +246,11 @@ After the transaction is confirmed on the Energi blockchain, your ERC-20 tokens 
 
 3.7.3. You can also verify the transaction on [Etherscan](http://etherscan.io/) by searching for your address:
 
-![alt_text](../assets/images/bridge/image7.png =600x)
+![alt_text](../assets/images/bridge/image7.png)
 
 Select the “Erc20 Token Txns” tab to see the transaction information.
 
-![alt_text](../assets/images/bridge/image15.png =850x)
+![alt_text](../assets/images/bridge/image15.png)
 
 ## 4. Supported Token Contract Addresses{#supported_tokens}
 
