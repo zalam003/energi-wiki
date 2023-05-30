@@ -11,9 +11,9 @@ title: Staking Guide
 
 **-** You need to have <kbd>Energi Core Node</kbd> installed & running 24/7 for Staking 👇
 
-- [Core Node on Desktop *for Windows*](/advanced/core-node-windows)
-- [Core Node on Desktop *for MacOS*](/advanced/core-node-mac)
-- [Core Node on VPS *for Ubuntu 18.04 x64*](https://wiki.energi.world/3-1/advanced/scripted-linux-installation)
+- [Core Node on Desktop *for Windows*](./core-node-windows.mdx)
+- [Core Node on Desktop *for MacOS*](./core-node-mac.mdx)
+- [Core Node on VPS *for Ubuntu 20.04 x64*](https://wiki.energi.world/3-1/advanced/scripted-linux-installation)
 
 :::info
 > In order to start staking you need **a minimum of 1 NRG.**
