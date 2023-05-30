@@ -1,6 +1,6 @@
 ---
 id: energiswap-farming
-title: Energi Yield Farming Quick Start Guide
+title: Energiswap Yield Farming Quick Start Guide
 ---
 
 Energi Yield Farming on Energiswap allows Liquidity Providers (LP token holders) to earn passive income, in the form of NRG tokens, by staking their liquidity position (LP tokens).
