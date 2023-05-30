@@ -1,13 +1,13 @@
 ---
 id: energiswap-farming
-title: Energi Yield Farming Quick Start Guide
+title: Energiswap Yield Farming Quick Start Guide
 ---
 
 Energi Yield Farming on Energiswap allows Liquidity Providers (LP token holders) to earn passive income, in the form of NRG tokens, by staking their liquidity position (LP tokens).
 
 This is a quick start guide, aimed at experienced DeFi users. If you need detailed instructions on how to Yield Farm using Energiswap, kindly refer to our detailed guide at:
 
-* [Energiswap Yield Farming Guide](https://wiki.energi.world/guides/energiswap-yield-farming)
+* [Energiswap Yield Farming Guide](./energiswap-farming-how-to.md)
 
 :::warning
 > **NOTE:** While staking LP tokens through Energi Yield Farming provides passive earnings like [Staking](https://wiki.energi.world/staking-guide) and [Masternodes](https://wiki.energi.world/masternode-guide), one should always consider the risk of Impermanent Loss when providing liquidity to automated market makers (AMM) platforms like Energiswap.
