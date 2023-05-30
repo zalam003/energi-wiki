@@ -12,12 +12,12 @@ title: Guides
 ## Energiswap Guides
 
 - [Energiswap Quick Start](./energiswap-quickstart.md)
-- [How-to Use Energiswap on Mainnet](https://wiki.energi.world/en/guides/energiswap-mainnet)
+- [How-to Use Energiswap on Mainnet](./energiswap-mainnet.mdx)
 - [Energiswap Analytics](https://info.energiswap.exchange/)
 - [How to Buy NRG at KuCoin](https://wiki.energi.world/en/guides/purchase-nrg-on-kucoin)
-- [Trading](https://wiki.energi.world/guides/energiswap-mainnet#h_01EZQJFBH8QPPGYK167QJG1W8C)
-- [Add Liquidity](https://wiki.energi.world/guides/energiswap-mainnet#h_01EZQJFPB1WNYCQK1FC54ESR8T)
-- [Remove liquidity](https://wiki.energi.world/guides/energiswap-mainnet#h_01EZQJFZ0791DV9YBHE92KR7X8)
+- [Trading](./energiswap-mainnet.mdx#32-swap-tokens)
+- [Add Liquidity](./energiswap-mainnet.mdx#33-add-liquidity)
+- [Remove liquidity](./energiswap-mainnet.mdx#34-remove-liquidity)
 - [Energi Bridge](https://bridge.energi.network/)
 - [Energi Bridge Quick Start Guide](https://wiki.energi.world/en/guides/energi-bridge-quick-start)
 - [Energi Yield Farming Quick Start Guide](https://wiki.energi.world/en/guides/energiswap-farming)
