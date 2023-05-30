@@ -4,7 +4,7 @@ title: How-to Transfer Tokens Using Energi Bridge
 ---
 
 :::warning **DISCLAIMER**
-> **All assets traded on Energiswap are tokenized versions of the underlying asset that exist only on the Energi blockchain. The tokens cannot be directly sent to an Exchange. You have to transfer the tokens from the Energi network to the Ethereum network using the [Energi Bridge](https://bridge.energi.network/) before sending them to an Exchange.**
+> All assets traded on Energiswap are tokenized versions of the underlying asset that exist only on the Energi blockchain. The tokens cannot be directly sent to an Exchange. You have to transfer the tokens from the Energi network to the Ethereum network using the [Energi Bridge](https://bridge.energi.network/) before sending them to an Exchange.
 :::
 
 Energi Bridge is a decentralized application (dApp) that connects two blockchains so that users can securely transfer ERC-20 tokens between the two networks. At this time, Energi Bridge connects the Ethereum and Energi blockchains. This connection allows users to move their ERC-20 assets from the Ethereum network to the Energi network and vice versa. The process of transferring assets from one network to another is called **Bridging**. Once assets are bridged to Ethereum to Energi, those can be traded on **[Energiswap](https://app.energiswap.exchange/)**
