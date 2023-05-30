@@ -28,7 +28,7 @@ title: Guides
 
 - [Core Node on Windows](./core-node-windows.mdx)
 - [Core Node on Mac](./core-node-mac.mdx)
-- [Staking Guide](https://wiki.energi.world/en/staking-guide)
+- [Staking Guide](./staking-guide.md)
 
 ## VPS Guides
 
