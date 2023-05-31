@@ -9,3 +9,4 @@ Have Questions? We have answers here.
 
 - [General FAQ](01-general.md)
 - [Energiswap FAQ](02-energiswap-faq.md)
+- [Energi Bridge FAQ](03-energi-bridge-faq.md)
