@@ -14,3 +14,4 @@ Have Questions? We have answers here.
 - [Staking FAQ](05-staking.md)
 - [Masternode FAQ](06-mastermode.md)
 - [Security FAQ](07-security.mdx)
+- [Migration FAQ](08-migration.md)
