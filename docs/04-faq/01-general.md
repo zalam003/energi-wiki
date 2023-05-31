@@ -9,7 +9,7 @@ title: General FAQ
 Energi Gen 2 was a fork of Dash which implements of Proof-of-Stake consensus.
 Energi Gen 3 is based on the same code as Ethereum (which allows the support of smart-contracts) while keeping our previous implementations.
 
-:::warming
+:::warning
 > **Energi Gen 3 IS NOT an ERC-20 token.**
 > Energi Gen 3 has its own blockchain that is compatible with dApps developped for Ethereum.
 :::
