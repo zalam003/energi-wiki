@@ -1,4 +1,5 @@
 ---
+sidebar_position: 1
 id: myenergiwallet
 title: MyEnergiWallet Downloads
 ---

@@ -1,4 +1,5 @@
 ---
+sidebar_position: 2
 id: core-node
 title: Energi Core Node Downloads
 ---
