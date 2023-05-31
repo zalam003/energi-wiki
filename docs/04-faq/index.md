@@ -11,3 +11,4 @@ Have Questions? We have answers here.
 - [Energiswap FAQ](02-energiswap-faq.md)
 - [Energi Bridge FAQ](03-energi-bridge-faq.md)
 - [NRGE Token FAQ](04-nrg-token-faq.md)
+- [Staking FAQ](05-staking.md)
