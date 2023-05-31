@@ -13,3 +13,4 @@ Have Questions? We have answers here.
 - [NRGE Token FAQ](04-nrg-token-faq.md)
 - [Staking FAQ](05-staking.md)
 - [Masternode FAQ](06-mastermode.md)
+- [Security FAQ](07-security.mdx)
