@@ -1,4 +1,5 @@
 ---
+sidebar_position: 6
 id: json-rpc
 title: JSON-RPC API
 ---
