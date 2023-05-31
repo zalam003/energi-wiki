@@ -1,4 +1,5 @@
 ---
+sidebar_position: 11
 id: energiswap-referral-program
 title: Energiswap Referral Program
 ---

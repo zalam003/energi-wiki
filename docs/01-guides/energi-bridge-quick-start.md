@@ -1,4 +1,5 @@
 ---
+sidebar_position: 8
 id: energi-bridge-quick-start
 title: Energi Bridge Quick Start Guide
 ---

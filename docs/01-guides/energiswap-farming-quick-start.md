@@ -1,4 +1,5 @@
 ---
+sidebar_position: 6
 id: energiswap-farming
 title: Energiswap Yield Farming Quick Start Guide
 ---
