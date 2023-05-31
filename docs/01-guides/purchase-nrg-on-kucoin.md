@@ -1,4 +1,5 @@
 ---
+sidebar_position: 12
 id: purchase-nrg-on-kucoin
 title: How to Buy NRG at KuCoin
 ---

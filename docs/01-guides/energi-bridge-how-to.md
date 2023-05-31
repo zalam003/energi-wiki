@@ -1,4 +1,5 @@
 ---
+sidebar_position: 9
 id: energi-bridge-how-to
 title: How-to Transfer Tokens Using Energi Bridge
 ---

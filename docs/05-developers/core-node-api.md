@@ -1,4 +1,5 @@
 ---
+sidebar_position: 4
 id: core-node-api
 title: Energi Core Node API
 ---

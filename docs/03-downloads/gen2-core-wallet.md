@@ -1,4 +1,5 @@
 ---
+sidebar_position: 3
 id: gen2-core-wallet
 title: "[Gen 2] Energi Core Wallet"
 ---

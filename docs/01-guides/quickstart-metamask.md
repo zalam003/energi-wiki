@@ -1,4 +1,5 @@
 ---
+sidebar_position: 2
 id: getting-started-with-metamask
 title: MetaMask Quick Start Guide
 ---

@@ -1,4 +1,5 @@
 ---
+sidebar_position: 2
 id: core-node-testnet-docker
 title: Energi Core Node Testnet Docker Deployment Guide
 ---

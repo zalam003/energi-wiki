@@ -1,4 +1,5 @@
 ---
+sidebar_position: 3
 id: core-node-simnet
 title: Energi Core Node Simnet Deployment Guide
 ---

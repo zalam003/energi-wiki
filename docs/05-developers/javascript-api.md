@@ -1,4 +1,5 @@
 ---
+sidebar_position: 5
 id: javascript-api
 title: Web3 JavaScript API
 ---

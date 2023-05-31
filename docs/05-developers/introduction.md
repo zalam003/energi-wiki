@@ -1,4 +1,5 @@
 ---
+sidebar_position: 1
 id: dev-docs
 title: Energi Developer Documentations
 ---

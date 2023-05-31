@@ -1,4 +1,5 @@
 ---
+sidebar_position: 15
 id: staking-guide
 title: Staking Guide
 ---
