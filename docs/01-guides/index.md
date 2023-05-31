@@ -41,3 +41,7 @@ title: Guides
 
 - [Masternode Guide](https://wiki.energi.world/en/masternode-guide)
 - [Change Auto-compounding settings on Core Node](https://wiki.energi.world/en/how-to/change-autocompounding)
+
+## NRG Token on Ethereum Chain
+
+- [Add NRG Token to Wallet](30-add-nrg-token.mdx)
