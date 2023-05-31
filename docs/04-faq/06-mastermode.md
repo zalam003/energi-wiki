@@ -50,7 +50,7 @@ However, your Masternode may get the "invalidation" votes what will prevent the 
 
 - If a Masternode has <kbd>isAlive</kbd> to **false** for more than 2 hours, then the status of <kbd>isActive</kbd> turns **false**. Nexus shows this as inactive. In this case, the Masternode needs to be reannounced.
 
-### For information on how to setup a Masternode, look at the guide below:
+## For information on how to setup a Masternode, look at the guide below:
 
 :::info
 - [Masternode Guide](#)
