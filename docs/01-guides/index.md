@@ -45,3 +45,4 @@ title: Guides
 ## NRG Token on Ethereum Chain
 
 - [Add NRG Token to Wallet](30-add-nrg-token.mdx)
+- [Add Liquidity to the Pools](31-add-nrg-liquidity.mdx)
