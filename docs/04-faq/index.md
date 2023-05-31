@@ -8,3 +8,4 @@ title: Frequently Asked Questions (FAQ)
 Have Questions? We have answers here.
 
 - [General FAQ](01-general.md)
+- [Energiswap FAQ](02-energiswap-faq.md)
