@@ -8,11 +8,11 @@ title: Masternode Guide
 
 **-** You need to create a <kbd>MyEnergiWallet</kbd> for Masternode-related operations:
 
-> [MyEnergiWallet Guide *using Web or Desktop app*](../assets/images/masternode/docs/guides/myenergiwallet)
+> [MyEnergiWallet Guide *using Web or Desktop app*](/docs/guides/myenergiwallet)
 
 **-** You need to have <kbd>Energi Core Node</kbd> installed & running 24/7 for your Masternode:
 
-> [Core Node on VPS *for Ubuntu 20.04 x64*](../assets/images/masternode/docs/guides/scripted-linux-installation)
+> [Core Node on VPS *for Ubuntu 20.04 x64*](/docs/guides/scripted-linux-installation)
 
 :::warning
 **We HIGHLY recommend to run Energi Core Node on a VPS, as your machine's IP will be displayed publicly in our Masternodes list.**
