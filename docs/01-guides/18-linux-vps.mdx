@@ -269,7 +269,159 @@ Now that you are all set with Energi Core Node, you can either follow the Stakin
 <TabItem value="gcp" label="Google Cloud Platform">
 ```
 
-Google Cloud Platform (GCP) VPS
+## 1.1. Create VPS
+
+![VM Instance](../assets/images/vps-linux/1fb6045f929f5fb8b3a79c03fb2d4901.png)
+
+### 1.1.1. Create VM Instance
+
+![Create VM Instance](../assets/images/vps-linux/8949580845c9d1475923899ef2a43dcf.png)
+
+### 1.1.2. New VM Instance
+
+Select E2 Series and E2-medium machine type:
+
+![New VM Instance](../assets/images/vps-linux/2a9c8da37429ceaf19e93e355adcecb0.png)
+
+Scroll down and change Boot disk:
+
+![Chnage OS](../assets/images/vps-linux/0695c9b004c93f443cff009d20643cfc.png)
+
+Under Boot disk select the following and enter 150 GB for the SSD persistent disk:
+
+![Ubuntu 20.04](../assets/images/vps-linux/10d9f571c8520877e5ed4373e85fadb8.png)
+
+Click Select:
+
+![Create VM](../assets/images/vps-linux/335abb8443dad34f56473a7285baf0f1.png)
+
+Go back to the VM Instances and click the 3 dots on the right of the VPS. On the drop down select `View network details`
+
+![View Network Details](../assets/images/vps-linux/7296d573d04fd2420dd131fe45bbc675.png)
+
+Click `Firewall Rules` on the side column twice. Then click `Create Firewall Rule`
+
+![Create Firewall Rule](../assets/images/vps-linux/46feba6e4905f5ec8ec96cab615da4d2.png)
+
+Enter the information and select the options like below and then scroll down on the page.
+
+![Create Firewall Rule 1](../assets/images/vps-linux/e6c10729f8dea473610923d366f9bb99.png)
+
+Select and enter data like below:
+
+![TCP 39797 ](../assets/images/vps-linux/b9fe45be3a61a9ed145f2ba7bced1d63.png)
+
+After that, scroll down and click `CREATE`
+
+![Create FW Rule](../assets/images/vps-linux/10cf1ce3ed3e11f5ffccc77b385403ed.png)
+
+Validate that the Firewall rule has been added:
+
+![FS Rule](../assets/images/vps-linux/31dea1e59b35e4ff1717ae5764fb294e.png)
+
+## 2. Create Key
+
+Download PuTTY Ken Generator and start it
+
+Click on `Generate` to create a key:
+
+![PuTTYgen Generate](/putty-gen/f0de356b082d892b5e5d45ce7995544c.png)
+
+Move the mouse until a key is generated:
+
+![PuTTYgen Randomness](/putty-gen/d6d652162d95b98cbd2b4d34eb30a5c1.png)
+
+Change the Key comment to `nrgstaker`.
+
+Clic `Save private key`:
+
+![PuTTYgen Save Key](/putty-gen/83d201c86df786d5a1628dd10b2a939a.png)
+
+Click `Yes` when the warning pops up:
+
+![PuTTYgen Without Passphrase](/putty-gen/4f71c9485a3e904fc40f7da0db867a19.png)
+
+Create a `New Folder` called `c:\energi3`. Save the private key in the folder:
+
+![PuTTYgen Folder](/putty-gen/b957ece83d899bd029880bf9f32784f5.png)
+
+Right click over the public key box and scroll down to `Select All`:
+
+![PuTTYgen Select All](/putty-gen/de0f691a79e872c3372e7d1c94620b98.png)
+
+Right click over the public key box and scroll down to `Copy`:
+
+![PuTTYgen Copy](/putty-gen/28f5e4b840bc37625b11491132fea88f.png)
+
+Exit PuTTY Key Generator:
+
+![PuTTYgen Exit](/putty-gen/f945cc8408e802f4d07b06b54b6906db.png)
+
+## 3. Add Public Key to VPS
+
+Go back to the GCP VM instance and click on the VPS name:
+
+![Select VM](../assets/images/vps-linux/d6b7372f41302bd2324acbfd5ce98494.png)
+
+Edit the VM Instance details:
+
+![Edit VM](../assets/images/vps-linux/59fc5ae6a2fe392abc3a28750a5939c8.png)
+
+Scroll down to SSH Key and click `Show and edit`
+
+![SSH Key Show and Edit ](../assets/images/vps-linux/0a13f19b89f335ce95b52aa8c54516c7.png)
+
+Paste the Public key copied from PuTTY Key Generator and Save it.
+
+![Add Public Key](../assets/images/vps-linux/60de5a4954b318e3bc6bafdd72e72582.png)
+
+## 4. Setup PuTTY and Login
+
+Start PuTTY and select Auth on the left. Then select `Browse`:
+
+![browse-key.png](../assets/images/vps-linux/browse-key.png)
+
+Go to the `c:\energi3` folder and select nrgstaker. Click `Open`:
+
+![](../assets/images/vps-linux/8362dcf16a980eb1716ee00df5cfd591.png)
+
+You will see the following:
+
+![](../assets/images/vps-linux/2bde430b0258ad0890ba3771ccc43d21.png)
+
+Click on Sessions and then enter `nrgstaker@IP_OF_VPS`. You will find the IP of the VPS on the VM Instances page. Enter a name in the `Saved Sessions` box and then click `Save`. Click `Open` to login to the VPS.
+
+![](../assets/images/vps-linux/3a1e589740ad4873004cb227c993f1f7.png)
+
+The first time you login to the VPS a Seurity Alert will pop up. Click Yes and continue.
+
+![](../assets/images/vps-linux/4759277447dd12259afbb104ae33a353.png)
+
+You will be logged into the VPS as user `nrgstaker`:
+
+![](../assets/images/vps-linux/911f4d52b8c576e05b54cccada29d230.png)
+
+Run the following commands on the PuTTY Terminal:
+
+```
+mkdir -p .energicore3/keystore
+chmod -R 700 .energicore3
+```
+
+In the PuTTY terminal now type the following to login as user `root`:
+
+```
+sudo su -
+```
+
+![](../assets/images/vps-linux/d3156af04c9725129fff690c968f9290.png)
+
+:::info
+NOTE: You will not be presented with a username and a password in section 3.2 since you have created and logged in as nrgstaker already.
+:::
+
+Follow the instructions in [Install Energi Core Node on Linux VPS](https://wiki.energi.world/en/3-1/advanced/scripted-linux-installation) to install and setup Energi Core Node on the VPS.
+
 
 ```mdx-code-block
 </TabItem>
