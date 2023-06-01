@@ -34,13 +34,13 @@ title: Guides
 
 - [Energi Core Node on VPS Quick Start Guide](16-quick-start-vps.mdx)
 - [Set up Masternode on Windows VPS at AWS](17-aws-windows-vps.md)
-- [Install Core Node on Linux VPS](scripted-linux-installation)
-- [How to Upgrade to Ubuntu 20.04](upgrade-ubuntu-18-to-20)
+- [Install Core Node on Linux VPS](/docs/guides/scripted-linux-installation)
+- [How to Upgrade to Ubuntu 20.04](/docs/guides/upgrade-ubuntu-18-to-20)
 
 ## Masternode Guides
 
 - [Masternode Guide](/docs/guides/masternode-guide)
-- [Change Auto-compounding settings on Core Node](https://wiki.energi.world/en/how-to/change-autocompounding)
+- [Change Auto-compounding settings on Core Node](/docs/guides/change-autocompounding)
 
 ## NRG Token on Ethereum Chain
 
