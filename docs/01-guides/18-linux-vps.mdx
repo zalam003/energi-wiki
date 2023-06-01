@@ -57,7 +57,7 @@ Use the **Recommended** configuration for best results
 
 ![Location](../assets/images/vps-linux/26977d754dd191c97990845f1a761fd3.png)
 
-## 1.2. Setup VPS
+## 1.2. Setup VPS at AWS
 
 ### 1.2.1. Services
 
@@ -158,7 +158,111 @@ Follow the instructions in [Install Energi Core Node on Linux VPS](https://wiki.
 <TabItem value="vultr" label="Vultr">
 ```
 
-Vultr VPS
+## 1.1. - Setup VPS at Vultr
+:::info
+> **[Vultr](https://www.vultr.com/?ref=8416824-6G) will provide a 100 USD bonus for new accounts.**
+:::
+
+**1.1.1 -** Choose a server location that is closest to you and cost effective. For Staking/Masternode, the location is not important.
+
+![Vultr - Choose Server](../assets/images/vps-linux/afd5bcbda391eac11ef8785114f6027e.png)
+
+![Vultr - Server Location](../assets/images/vps-linux/b1bdbd303deafccaed971117d244e475.png)
+
+**1.1.2 -** Select Ubuntu 20.04 x64 as the Server Type.
+
+![Vultr - Ubuntu 20.04](../assets/images/vps-linux/e1f71290563de080b7e65208bb28730e.png)
+
+**1.1.3 -** This plan (below) matches our recommended system requirements
+
+![Vultr - 150GB Server](https://i.imgur.com/1Q9OpRy.png)
+
+**1.1.4 -** Leave the additional features section blank. This guide will not use any startup scripts. So leave that option alone as well.
+
+:::info
+***OPTIONAL:** You can choose to set up an SSH key to make it easier to securely log into your server. Click add new and follow the tutorial for creating an SSH key. This step is optional, but recommended. Using an SSH key to login is not only easier than using a password, but much more secure.*
+:::
+
+**1.1.5 -** Enter a hostname and label (example: stakingNRG) for your server and click Deploy Now
+
+![Vultr - Name server](../assets/images/vps-linux/e30219d049218901576f1a43d9452cec.png)
+
+**1.1.6 -** Wait for your server to install. It should only take a few minutes.
+
+You will receive an email confirming that your server has been created, with information on how to access it remotely.
+
+![Vult - email notice](../assets/images/vps-linux/54d76bfdbc395b34df535ee9753d71e7.png)
+
+## 2. - Login to your VPS
+
+> You can either open the console within Vultr or use any SSH (secure shell) software to connect to the VPS. If you’re using Windows, we recommend [PuTTY](https://www.chiark.greenend.org.uk/~sgtatham/putty/latest.html).
+
+**2.1.1 -** For Mac & Linux
+
+Both `ssh` and `sftp` already come with the system to login and securely transfer files respectively. Open a Terminal and run this command:
+
+```
+ssh user@[server ip address]
+```
+
+**Example:**
+
+```
+ssh root@144.202.73.194
+
+```
+
+**2.1.2 -** For Windows
+
+In Putty, enter your server’s IP address, make sure `SSH` and Port `22` are selected and then click on <kbd>Open</kbd>.
+
+![Putty Configuration](../assets/images/vps-linux/7d5de1c56ccd06d0205f093516142cde.png)
+
+**2.2 -** You may get a security alert about the server’s rsa2 key fingerprint. Just click <kbd>Yes</kbd> to trust the server and connect via SSH.
+
+![Putty Security Alert](../assets/images/vps-linux/5fbb448a8d11ea4ca9b8e4fc0f0c7468.png)
+
+**2.3 -** You will be prompted to enter your username and password. See the informations on your Vultr dashboard.
+
+![Putty Terminal](../assets/images/vps-linux/59585f9a6c9eabcc9697a505743c5d86.png)
+
+:::tip Success
+**You are now connected to your VPS!**
+:::
+
+**2.4 -** We **HIGHLY** recommend you to change your password by running the command:
+
+```
+passwd
+```
+
+![Change root password](../assets/images/vps-linux/8be3ce4ed9d8e7ab746b9de5c43db644.png)
+
+## 3. Run Provisioning Script
+
+Follow the instructions in [Install Energi Core Node on Linux VPS](https://wiki.energi.world/en/3-1/advanced/scripted-linux-installation) to install and setup Energi Core Node on the VPS.
+
+## Next Step - Staking & Masternode
+
+Before setting up Staking node / Masternode, [bootstrap](https://wiki.energi.world/core-node-troubleshoot#linux) the node. This will expedite the sync process.
+
+Now that you are all set with Energi Core Node, you can either follow the Staking or the Masternode Guide :
+
+- Staking Guide
+
+> [Staking Guide](staking-guide)
+
+- Masternode Guide
+
+> [Masternode Guide](https://wiki.energi.world/en/masternode-guide)
+
+## Need help?
+
+**-** Get technical assistance :
+
+> [Help me!](https://wiki.energi.world/en/support/help-me) *Get technical assistance by the Energi team*
+
+
 
 ```mdx-code-block
 </TabItem>
