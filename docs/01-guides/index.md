@@ -26,13 +26,13 @@ title: Guides
 
 ## Staking Guides
 
-- [Core Node on Windows](./core-node-windows.mdx)
+- [Core Node on Windows](13-core-node-windows.mdx)
 - [Core Node on Mac](./core-node-mac.mdx)
 - [Staking Guide](./staking-guide.md)
 
 ## VPS Guides
 
-- [Energi Core Node on VPS Quick Start Guide](https://wiki.energi.world/en/guides/energi-core-node-vps-quick-start)
+- [Energi Core Node on VPS Quick Start Guide](16-quick-start-vps.mdx)
 - [Set up Masternode on Windows VPS and AWS](https://wiki.energi.world/en/advanced/aws-windows-vps)
 - [Install Core Node on Linux VPS](https://wiki.energi.world/en/3-1/advanced/scripted-linux-installation)
 - [How to Upgrade to Ubuntu 20.04](https://wiki.energi.world/en/3-1/how-to/upgrade-ubuntu-18-to-20)
