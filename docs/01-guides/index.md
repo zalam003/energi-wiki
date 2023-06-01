@@ -46,3 +46,4 @@ title: Guides
 
 - [Add NRG Token to Wallet](30-add-nrg-token.mdx)
 - [Add Liquidity to the Pools](31-add-nrg-liquidity.mdx)
+- [Remove Liquidity from the Pools](/docs/guides/remove-NRG-liquidity-uniswap)
