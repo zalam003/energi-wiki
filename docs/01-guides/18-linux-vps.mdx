@@ -502,7 +502,75 @@ Follow the instructions in [Install Energi Core Node on Linux VPS](https://wiki.
 <TabItem value="contabo" label="Contabo">
 ```
 
-Contabo VPS
+**1.1 -** Navigate to [Contabo’s Home Page](https://contabo.com/en/vps/) and select the VPS option that meets the minimum requirements:
+
+![alt_text](../assets/images/vps-linux/image1.png)
+
+**1.2 -** At the _Configure your VPS_ page, you will be able to select the location of your VPS server, as well as the Storage Type, Operating System and any optional Add-ons:
+
+![alt_text](../assets/images/vps-linux/image2.png)
+
+![alt_text](../assets/images/vps-linux/image3.png)
+
+![alt_text](../assets/images/vps-linux/image4.png)
+
+It is not required to acquire any add-ons. Once finished, click the _Next_ button.
+
+**1.3 -** Review your purchase and confirm it. The VPS will start to be deployed and your credentials to access it will be sent to you by the Contabo team once it has finished installing.
+
+![alt_text](../assets/images/vps-linux/image5.png)
+
+Take note of your ***IP Address***, ***Username (root)*** and ***Password* (not to be confused with the VNC password!)** so you can use them to log into the VPS at the next step.
+
+## 2 - Log in to your VPS instance
+
+**2.1.1 - For Mac & Linux Users**
+
+For Mac and Linux users, both _ssh_ and _sftp_ tools come installed with the system by default. If you are either a Mac OS or Linux user, open a Terminal window and run the following command to log into your VPS:
+
+```
+ssh root@ip_address
+```
+
+Replace **ip_address** by your VPS IP address that you have copied in the previous step. Example:
+
+```
+ssh root@194.100.15.25
+```
+
+**2.1.2 - Windows Users**
+
+For Windows, we recommend using the [PuTTY Client](https://www.chiark.greenend.org.uk/~sgtatham/putty/latest.html). Download and Install PuTTY, then run it. Once the _PuTTY Configuration_ screen appears, make sure **SSH** and port **22** are selected, then paste your VPS IP address as the example below and click on **Open**:
+
+![alt_text](../assets/images/vps-linux/image6.png)
+
+**2.2 -** If you receive a security alert about the server’s fingerprint, just click on **Yes** to proceed:
+![alt_text](../assets/images/vps-linux/image7.png)
+
+**2.3 -** You will be prompted to enter your username and password. Log in as the **root** user and use the password you received by e-mail from Contabo:
+![alt_text](../assets/images/vps-linux/image8.png)
+
+![alt_text](../assets/images/vps-linux/image9.png)
+
+**2.4 -** We **HIGHLY** recommend that you change your root password by running the following command:
+
+```
+passwd
+```
+
+![alt_text](../assets/images/vps-linux/image10.png)
+
+## 3 - Run the Provisioning Script
+
+Follow the instructions in [Core Node on Linux VPS](https://wiki.energi.world/en/3-1/advanced/scripted-linux-installation) to install and setup Energi Core Node on the VPS.
+
+## Next Step - Staking & Masternode
+
+Once you finish setting up the Energi Core Node, you will be ready to either start Staking or announce your Masternode. Keep in mind that you can also both Stake and have a Masternode using the same Core Node instance.
+
+> [Staking Guide](staking-guide)
+
+> [Masternode Guide](https://wiki.energi.world/en/masternode-guide)
 
 
 ```mdx-code-block
