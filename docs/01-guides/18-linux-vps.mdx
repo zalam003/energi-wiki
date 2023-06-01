@@ -1,0 +1,190 @@
+---
+sidebar_position: 18
+id: linux-vps
+title: Set up Linux VPS
+---
+
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
+
+The following table lists the specifications for a VPS to run a Energi Gen 3 Masternode:
+
+<center>
+<table>
+    <tr>
+        <th>Hardware</th>
+        <th>Minimum</th>
+        <th>Recommended</th>
+    </tr>
+    <tr>
+        <td>CPU (Core)</td>
+        <td>1 x 1 GHz</td>
+        <td>2 x 2 GHz</td>
+    </tr>
+    <tr>
+        <td>RAM (Memory)</td>
+        <td>2 GB</td>
+        <td>4 GB</td>
+    </tr>
+    <tr>
+        <td>Storage</td>
+        <td>150 GB</td>
+        <td>200 GB</td>
+    </tr>
+    <tr>
+        <td>SWAP</td>
+        <td>2 GB</td>
+        <td>0 GB</td>
+    </tr>
+    <tr>
+        <td>Operating System</td>
+        <td>Ubuntu 20.04 x64</td>
+        <td>Ubuntu 20.04 x64</td>
+    </tr>
+</table>
+</center>
+
+:::tip
+Use the **Recommended** configuration for best results
+:::
+
+```mdx-code-block
+<Tabs groupId="author-front-matter">
+<TabItem value="aws" label="AWS">
+```
+
+## 1.1. Select Location
+
+![Location](../assets/images/vps-linux/26977d754dd191c97990845f1a761fd3.png)
+
+## 1.2. Setup VPS
+
+### 1.2.1. Services
+
+![Select Services](../assets/images/vps-linux/b0dc2d075878e502539c19b5332e37fe.png)
+
+### 1.2.2. EC2
+
+![Compute EC2](../assets/images/vps-linux/c36fab16644f5e0902b8bec256f26bf5.png)
+
+### 1.2.3. Instances
+
+![Instances](../assets/images/vps-linux/07b9226cd790d971be3aa86d1f2bd9ec.png)
+
+### 1.2.4. Launch Instances
+
+![Launch Instances](../assets/images/vps-linux/6d3dee6e50fc1b0f0c869b4e0502befe.png)
+
+### 1.2.5. Choose AMI
+
+![Choose AMI](../assets/images/vps-linux/a39049071447969409132634d5de16dc.png)
+
+### 1.2.6. Choose Instance Type
+
+![Choose Instance Type](../assets/images/vps-linux/4f1b631ad750c9d98b3e0d820a908070.png)
+
+### 1.2.7. Edit Security Group
+
+![Edit Security Group](../assets/images/vps-linux/bb73e71fb65436bb9e07f3b376f24c3c.png)
+
+### 1.2.8. Custom TCP for Core Node
+
+![Custom TCP](../assets/images/vps-linux/a450b472c4290e29fef37b71b7608453.png)
+
+### 1.2.9. Launch VPS Instance
+
+![Launch VPS](../assets/images/vps-linux/3b9ed9e26ffdddc3e5a9ff6f841d9c75.png)
+
+### 1.2.10. Download Key Pair
+
+![Download Key Pair](../assets/images/vps-linux/cb24422907b647e66b16d5874bfc90b4.png)
+
+![Save Key Pair](../assets/images/vps-linux/bf737bc2edbde53aaf3780717897a968.png)
+
+![Launch Instance](../assets/images/vps-linux/a845132609d1f8cca8159fc6d6b49f2d.png)
+
+### 1.2.11. View Instance
+
+![View Instance](../assets/images/vps-linux/a06ad0f2dc250678b513bae68806b31b.png)
+
+![Name Instance](../assets/images/vps-linux/204e927290ac5b6cd116470524701c80.png)
+
+### 1.2.12. Select Public DNS
+
+![Public DNS](../assets/images/vps-linux/8edc42bd008fa5c39f374816b4261271.png)
+
+## 2. PuTTY Key Generator
+
+![PuTTY Key Generator](../assets/images/vps-linux/45d9e8a9049c114d23cd8def5343041b.png)
+
+![Load Key](../assets/images/vps-linux/f0ce7c154264ef23b6bfe1b6fab37777.png)
+
+![Successful Import](../assets/images/vps-linux/39d48eea401f480d045bc8d1120011ce.png)
+
+![Save Private Key](../assets/images/vps-linux/de1231b455ae24b222e9a9a85e614f1a.png)
+
+![Without Passphrase](../assets/images/vps-linux/e4ab8b7da25b49af5642c4c1f77ecef7.png)
+
+![Location of Keyfile](../assets/images/vps-linux/e08633bb203485e3adee5f705a4617c0.png)
+
+![Exit Key Gen](../assets/images/vps-linux/f1e73d24a36a1de89eeca6bf32f96c51.png)
+
+## 3. Setup PuTTY
+
+![Browse Key Pair](../assets/images/vps-linux/122b73fc7894e976d46f967fb8ad06b4.png)
+
+![Select Key Pair](../assets/images/vps-linux/272e9f76959528818a468a040fc511a3.png)
+
+![Key Pair](../assets/images/vps-linux/cd8cb039233073e28ff3bb21bf6b8f4d.png)
+
+![Save Session](../assets/images/vps-linux/bb36b90b7b485704f07fd1ce644a63e9.png)
+
+![PuTTY Security Alert](../assets/images/vps-linux/738a35b0141fbcea2aeff68c2cb119f0.png)
+
+![PuTTY Session](../assets/images/vps-linux/3c1471fb9d231090b6f33c3a2c4f6fea.png)
+
+## 4. Login as root
+
+```
+sudo su -
+```
+
+## 5. Run Provisioning Script
+
+Follow the instructions in [Install Energi Core Node on Linux VPS](https://wiki.energi.world/en/3-1/advanced/scripted-linux-installation) to install and setup Energi Core Node on the VPS.
+
+```mdx-code-block
+</TabItem>
+<TabItem value="vultr" label="Vultr">
+```
+
+Vultr VPS
+
+```mdx-code-block
+</TabItem>
+<TabItem value="gcp" label="GCP">
+```
+
+Google Cloud Platform (GCP) VPS
+
+```mdx-code-block
+</TabItem>
+<TabItem value="digital" label="Digital Ocean">
+```
+
+Digital Ocean VPS
+
+```mdx-code-block
+</TabItem>
+<TabItem value="contabo" label="Contabo">
+```
+
+Contabo VPS
+
+
+```mdx-code-block
+</TabItem>
+
+</Tabs>
+```
+
