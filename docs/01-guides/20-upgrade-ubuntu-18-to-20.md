@@ -165,4 +165,4 @@ exit
 
 **-** Get technical assistance:
 
-> [Help me!](/support/help-me) *Get technical assistance by the Energi team*
+> [Help me!](https://wiki.energi.world/support/help-me) *Get technical assistance by the Energi team*
