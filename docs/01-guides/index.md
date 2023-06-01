@@ -33,7 +33,7 @@ title: Guides
 ## VPS Guides
 
 - [Energi Core Node on VPS Quick Start Guide](16-quick-start-vps.mdx)
-- [Set up Masternode on Windows VPS and AWS](https://wiki.energi.world/en/advanced/aws-windows-vps)
+- [Set up Masternode on Windows VPS at AWS](17-aws-windows-vps.md)
 - [Install Core Node on Linux VPS](https://wiki.energi.world/en/3-1/advanced/scripted-linux-installation)
 - [How to Upgrade to Ubuntu 20.04](https://wiki.energi.world/en/3-1/how-to/upgrade-ubuntu-18-to-20)
 
