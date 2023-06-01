@@ -428,7 +428,74 @@ Follow the instructions in [Install Energi Core Node on Linux VPS](https://wiki.
 <TabItem value="digital" label="Digital Ocean">
 ```
 
-Digital Ocean VPS
+After you sign up with DigitalOcean, follow the steps below to setup a VPS:
+
+### 1.1. Manage Droplets
+
+After you sign up, go to the Droplets page and then click `Create Droplet`.
+
+![droplet](../assets/images/vps-linux/93aaa6dd541ffa91ce02c1535002b9df.png)
+
+### 1.2. Create Droplet
+
+#### 1.2.1. Choose an image
+
+Click `Distributions` and then select `20.04 (LTS) x64` from **Ubuntu**.
+
+![choose image](../assets/images/vps-linux/22c98ef3ff21c9d8e2418d6d18c6fc90.png)
+
+#### 1.2.2. Choose Plan
+
+Under the `Basic` plans select the plan that matches at least the minimum disk requirements (**150 GB**).
+
+![choose plan](../assets/images/vps-linux/dotier.png)
+
+#### 1.2.3. Choose a datacenter region
+
+Select one of the datacenters listed. It does not matter which one you pick. We recommend you pick one closest to you so that there is no lag in accessing the VPS from your location.
+
+![datacenter](../assets/images/vps-linux/ff22f7e4b4e12ef2beb48f59eb4e5547.png)
+
+#### 1.2.4. VPC Network & Authentication {#password}
+
+Keep the default VPC Network – `No VPC`. This will create a VPC with internet IP address.
+
+You can select `Monitoring` to monitor your VPS.
+
+We recommend you create and use an SSH key for root login. In this guide we are using the `Password` option. Create a password that is difficult to guess and meets DigitalOcean’s password requirements.
+
+![VPC Network](../assets/images/vps-linux/efbb882673e2c68d23de78eeb98133e5.png)
+
+![Authentication](../assets/images/vps-linux/10407058e54a9d4b8c72c50a7f934896.png)
+
+#### 1.2.5. Choose a hostname
+
+Give your VPS a name. In this guide, we named it `nrgstaker`.
+
+![Hostname](../assets/images/vps-linux/a0bdd773a383e988fbdece9db89575a5.png)
+
+#### 1.2.6. Create Droplet
+
+Click `Create Droplet` to create the VPS.
+
+![Create droplet](../assets/images/vps-linux/50135516f4cd3be644f44170c761d3a9.png)
+
+### 1.3. VPS Information
+
+After few minutes, you will see the following screen.
+
+![IP address](../assets/images/vps-linux/1134036ba3cc7ec7914a49584efb5bde.png)
+
+It provides the IP address of the VPS. You will need the following information to login to the VPS:
+
+- _IP address_: Use the IP address assigned to the VPS
+- _Username_: root
+- _Password_: The password you created in [Section 1.2.4](#password) above.
+
+## 2. Run Provisioning Script
+
+Follow the instructions in [Install Energi Core Node on Linux VPS](https://wiki.energi.world/en/3-1/advanced/scripted-linux-installation) to install and setup Energi Core Node on the VPS.
+
 
 ```mdx-code-block
 </TabItem>
