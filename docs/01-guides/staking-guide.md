@@ -12,7 +12,7 @@ title: Staking Guide
 
 **-** You need to have <kbd>Energi Core Node</kbd> installed & running 24/7 for Staking 👇
 
-- [Core Node on Desktop *for Windows*](./core-node-windows.mdx)
+- [Core Node on Desktop *for Windows*](./13-core-node-windows.mdx)
 - [Core Node on Desktop *for MacOS*](./core-node-mac.mdx)
 - [Core Node on VPS *for Ubuntu 20.04 x64*](https://wiki.energi.world/3-1/advanced/scripted-linux-installation)
 

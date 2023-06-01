@@ -15,7 +15,7 @@ There is no desktop wallet for Energi 3.0. Staking is performed using a node eit
 See below for instructions on setting up an Energi Core Node on your desktop or a VPS.
 
 :::info
-- [Core Node on Windows](../01-guides/core-node-windows.mdx)
+- [Core Node on Windows](../01-guides/13-core-node-windows.mdx)
 - [Core Node on MacOS](../01-guides/core-node-mac.mdx)
 - [Core Node on VPS *using Ubuntu 20.04 x64*](#)
 :::
