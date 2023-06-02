@@ -15,6 +15,7 @@ const config = {
   favicon: 'img/favicon.png',
   organizationName: 'Energi', // Usually your GitHub org/user name.
   projectName: 'EnergiWiki', // Usually your repo name.
+  trailingSlash: false, // Remove trailing slash to Docusaurus URLs
 
   presets: [
     [
