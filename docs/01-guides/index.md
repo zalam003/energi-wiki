@@ -40,7 +40,7 @@ title: Guides
 ## Masternode Guides
 
 - [Masternode Guide](/docs/guides/masternode-guide)
-- [Change Auto-compounding settings on Core Node](/docs/guides/energi-bridge-quick-startchange-autocompounding)
+- [Change Auto-compounding settings on Core Node](/docs/guides/change-autocompounding)
 
 ## NRG Token on Ethereum Chain
 
